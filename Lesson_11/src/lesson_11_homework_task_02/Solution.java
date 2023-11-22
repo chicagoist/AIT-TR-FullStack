@@ -26,7 +26,7 @@ public class Solution {
 
     }
 
-    private static void printTriangle(int number) {
+/*    private static void printTriangle(int number) {
         int index = 1;
         String line = "";
 
@@ -35,5 +35,26 @@ public class Solution {
             System.out.println(line);
             index++;
         }
+    }*/
+
+        private static void printTriangle(int number) {
+
+        int firstIndex = 1;
+
+        while(firstIndex <= number) {
+
+            int secondIndex = 1;
+
+            while(secondIndex <= firstIndex) {
+                System.out.print(secondIndex);
+                secondIndex++;
+            }
+            System.out.println("");
+            firstIndex++;
+        }
     }
+
+
+
+
 }
