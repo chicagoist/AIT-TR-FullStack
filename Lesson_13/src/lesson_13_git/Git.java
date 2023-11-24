@@ -14,7 +14,7 @@ public class Git {
         int i = 1;
 
         while(scan.hasNextLine()) {
-            System.out.println(i + " : " + scan.nextLine());
+            System.out.println(i + "   " + scan.nextLine());
             i++;
         }
 
