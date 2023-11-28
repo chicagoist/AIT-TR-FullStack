@@ -1,12 +1,5 @@
 package lesson_13_homework_task_03;
 
-/*
-Задача3
-
-Дан массив целых чисел. Написать метод, возвращающий наименьший элемент массива.
-public static int findMin(int[] ints)
- */
-
 
 public class Solution {
     public static void main(String[] args) {
