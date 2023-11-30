@@ -15,10 +15,6 @@ public class Solution {
         String newStr = myScanner.nextLine();
 
         System.out.println(getDoubleLength(newStr));
-
-
-
-
     }
 
     private static int getDoubleLength(String str) {
