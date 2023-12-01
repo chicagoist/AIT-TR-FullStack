@@ -11,7 +11,7 @@ public class Solution {
         int len = str.length;
         System.out.println("removeDuplicateElements : " + removeDuplicateElements(str, len));
 
-        // добавил новый метод
+        // добавил новый метод removeDuplicateV2
         System.out.println("removeDuplicateV2 : " + removeDuplicateV2(str));
 
         //Анаграмма
