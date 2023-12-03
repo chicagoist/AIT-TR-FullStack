@@ -1,10 +1,5 @@
 package lesson_17_homework_task_01;
 
-/*
-
- */
-
-
 import java.util.Arrays;
 
 public class Solution {
