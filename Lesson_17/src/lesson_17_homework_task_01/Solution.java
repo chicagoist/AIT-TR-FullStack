@@ -23,9 +23,6 @@ public class Solution {
 
     private static boolean checkAnagram(String anagramStr1, String anagramStr2) {
 
-        boolean result = false;
-        int index = 0;
-
         if(anagramStr1.length() != anagramStr2.length()) {
             return false;
         }
