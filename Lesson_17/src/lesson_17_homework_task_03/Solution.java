@@ -1,5 +1,5 @@
 package lesson_17_homework_task_03;
-
+//tabnine::config
 /*
 Задача 3*
 
