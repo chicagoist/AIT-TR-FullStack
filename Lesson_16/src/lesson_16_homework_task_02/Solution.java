@@ -6,24 +6,10 @@ package lesson_16_homework_task_02;
 Пример: "Hello", "There" -> ELLOHERE
  */
 
-
-import java.util.Scanner;
-
 public class Solution {
-    public static void main(String[] args) {
 
-        Scanner myScanner = new Scanner(System.in);
-        System.out.print("Enter a first string : ");
-        String firstStr = myScanner.nextLine();
-        System.out.print("Enter a second string : ");
-        String secondStr = myScanner.nextLine();
+  protected static String twoString(String first, String second) {
 
-        System.out.println(twoString(firstStr,secondStr));
-
-    }
-
-    private static String twoString(String first, String second) {
-
-        return (first.toUpperCase().substring(1).concat(second.toUpperCase().substring(1)));
-    }
+    return (first.toUpperCase().substring(1).concat(second.toUpperCase().substring(1)));
+  }
 }

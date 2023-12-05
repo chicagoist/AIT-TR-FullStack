@@ -21,12 +21,12 @@ public class Rectangle {
     return this.length;
   }
 
-  public int getWidth() {
-    return this.width;
-  }
-
   public void setLength(int length) {
     this.length = length;
+  }
+
+  public int getWidth() {
+    return this.width;
   }
 
   public void setWidth(int width) {

@@ -5,21 +5,10 @@ package lesson_16_homework_task_01;
 Пример: Hello -> 10
  */
 
-import java.util.Scanner;
-
 public class Solution {
-    public static void main(String[] args) {
 
-        Scanner myScanner = new Scanner(System.in);
-        System.out.print("Enter a string : ");
-        String newStr = myScanner.nextLine();
+  static int getDoubleLength(String str) {
 
-        System.out.println(getDoubleLength(newStr));
-    }
-
-    private static int getDoubleLength(String str) {
-
-        return (str.length() * 2);
-
-    }
+    return (str.length() * 2);
+  }
 }

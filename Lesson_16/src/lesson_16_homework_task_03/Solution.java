@@ -6,25 +6,10 @@ package lesson_16_homework_task_03;
 Примет: abcd -> bcda
  */
 
-
-import java.util.Scanner;
-
 public class Solution {
-    public static void main(String[] args) {
 
-        Scanner myScanner = new Scanner(System.in);
-        System.out.print("Enter a string : ");
-        String testStr = myScanner.nextLine();
+  static String mixingStrings(String str) {
 
-        String mixStr = mixingStrings(testStr);
-
-        System.out.println(mixStr);
-    }
-
-    private static String mixingStrings(String str) {
-
-        return str.concat(str.substring(0,1)).substring(1);
-
-    }
-
+    return str.concat(str.substring(0, 1)).substring(1);
+  }
 }

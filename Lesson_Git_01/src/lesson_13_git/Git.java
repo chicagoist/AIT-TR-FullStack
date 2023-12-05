@@ -5,24 +5,21 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Git {
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-        System.out.println("Hello, Git!");
-        FileReader fr = new FileReader("Lesson_13/src/lesson_13_git/HowToIgnoreIdea.txt");
-        Scanner scan = new Scanner(fr);
+    System.out.println("Hello, Git!");
+    FileReader fr = new FileReader("Lesson_13/src/lesson_13_git/HowToIgnoreIdea.txt");
+    Scanner scan = new Scanner(fr);
 
-        int i = 1;
+    int i = 1;
 
-        while(scan.hasNextLine()) {
-            System.out.println(i + "   " + scan.nextLine());
-            i++;
-        }
-
-        fr.close();
-
-
+    while (scan.hasNextLine()) {
+      System.out.println(i + "   " + scan.nextLine());
+      i++;
     }
 
+    fr.close();
+  }
 }
 
 /*

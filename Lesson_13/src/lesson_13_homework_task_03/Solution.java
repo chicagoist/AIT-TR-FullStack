@@ -1,28 +1,15 @@
 package lesson_13_homework_task_03;
 
-
 public class Solution {
-    public static void main(String[] args) {
 
-        int[] numbersArray = new int[10];
+  protected static int findMin(int[] ints) {
 
-        for(int i = 0; i < numbersArray.length; i++) {
-            numbersArray[i] = (int) (Math.random() * 10);
-            System.out.println(numbersArray[i]);
-        }
-
-        System.out.println("Min of the random Array is = " + findMin(numbersArray));
+    int min = ints[0];
+    for (int i = 1; i < ints.length; i++) {
+      if (min > ints[i]) {
+        min = ints[i];
+      }
     }
-
-
-    public static int findMin(int[] ints) {
-
-        int min = ints[0];
-        for(int i = 1; i < ints.length; i++) {
-            if(min > ints[i]) {
-                min = ints[i];
-            }
-        }
-        return min;
-    }
+    return min;
+  }
 }
