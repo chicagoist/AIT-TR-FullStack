@@ -18,9 +18,9 @@ public class CesarCode {
     char[] chars = text.toCharArray();
     for (int i = 0; i < chars.length; i++) {
       if (chars[i] >= 'a' && chars[i] <= 'u') {
-        chars[i] = (char) (chars[i] + displacement);
+        chars[i] = (char) (chars[i] + getDisplacement());
       } else if (chars[i] > 'u' && chars[i] <= 'z') {
-        chars[i] = (char) (chars[i] + displacement - 26);
+        chars[i] = (char) (chars[i] + getDisplacement() - 26);
       }
     }
     return new String(chars);
