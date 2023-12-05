@@ -33,6 +33,7 @@ public class Main {
   }
 }
 /* Выхлоп:
+
 Fahrenheit = 32.0 and Celsius = 0.0
 Fahrenheit = 0.0 and Celsius = -17.8
 Fahrenheit = 100.0 and Celsius = 37.8
