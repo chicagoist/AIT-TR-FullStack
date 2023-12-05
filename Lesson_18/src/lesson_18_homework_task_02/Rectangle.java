@@ -9,52 +9,64 @@ package lesson_18_homework_task_02;
  */
 public class Rectangle {
 
-    private int length = 0;
-    private int width = 0;
+  private int length = 0;
+  private int width = 0;
 
-    public Rectangle(int length, int width) {
-        setLength(length);
-        setWidth(width);
-    }
+  public Rectangle(int length, int width) {
+    setLength(length);
+    setWidth(width);
+  }
 
-    public int getLength() {
-        return this.length;
-    }
+  public int getLength() {
+    return this.length;
+  }
 
-    public int getWidth() {
-        return this.width;
-    }
+  public int getWidth() {
+    return this.width;
+  }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
+  public void setLength(int length) {
+    this.length = length;
+  }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
+  public void setWidth(int width) {
+    this.width = width;
+  }
 
-    public int getRectangleArea() {
-        return getLength() * getWidth();
-    }
+  public int getRectangleArea() {
+    return getLength() * getWidth();
+  }
 
-    public int getRectanglePerimeter() {
-        return (2 * (getLength() + getWidth()));
-    }
+  public int getRectanglePerimeter() {
+    return (2 * (getLength() + getWidth()));
+  }
 
-    public static void main(String[] args) {
-        Rectangle firstRectangle = new Rectangle(10, 5);
-        Rectangle secondRectangle = new Rectangle(2, 6);
-        Rectangle thirdRectangle = new Rectangle(4, 4);
+  public static void main(String[] args) {
+    Rectangle firstRectangle = new Rectangle(10, 5);
+    Rectangle secondRectangle = new Rectangle(2, 6);
+    Rectangle thirdRectangle = new Rectangle(4, 4);
 
-        System.out.println("firstRectangle has a area: " + firstRectangle.getRectangleArea() + " and perimeter: " + firstRectangle.getRectanglePerimeter());
-        System.out.println("secondRectangle has a area: " + secondRectangle.getRectangleArea() + " and perimeter: " + secondRectangle.getRectanglePerimeter());
-        System.out.println("thirdRectangle has a area: " + thirdRectangle.getRectangleArea() + " and perimeter: " + thirdRectangle.getRectanglePerimeter());
+    System.out.println(
+        "firstRectangle has a area: "
+            + firstRectangle.getRectangleArea()
+            + " and perimeter: "
+            + firstRectangle.getRectanglePerimeter());
+    System.out.println(
+        "secondRectangle has a area: "
+            + secondRectangle.getRectangleArea()
+            + " and perimeter: "
+            + secondRectangle.getRectanglePerimeter());
+    System.out.println(
+        "thirdRectangle has a area: "
+            + thirdRectangle.getRectangleArea()
+            + " and perimeter: "
+            + thirdRectangle.getRectanglePerimeter());
 
-        /*
-        firstRectangle has a area: 50 and perimeter: 30
-        secondRectangle has a area: 12 and perimeter: 16
-        thirdRectangle has a area: 16 and perimeter: 16
-         */
+    /*
+    firstRectangle has a area: 50 and perimeter: 30
+    secondRectangle has a area: 12 and perimeter: 16
+    thirdRectangle has a area: 16 and perimeter: 16
+     */
 
-    }
+  }
 }
