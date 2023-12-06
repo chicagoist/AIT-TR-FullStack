@@ -8,6 +8,8 @@ public class Main {
         truck.fillFuel(200);
         truck.printRemainingCapacity();
         System.out.println(truck);
-        System.out.println(truck);
+        System.out.println("Can the truck move: " + truck.move());
+        System.out.println("Can the truck stop: " + truck.stop());
+
     }
 }

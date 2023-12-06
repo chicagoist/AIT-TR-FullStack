@@ -59,11 +59,11 @@ public class Truck {
 
 
     public void printRemainingCapacity() {
-        System.out.println(getCurrentWeight());
+        System.out.println("Current weight: "+getCurrentWeight());
     }
 
     private int getCurrentWeight() {
-        return this.currentWeight;
+        return this.maxWeight - this.currentWeight;
     }
 
     private void setCurrentWeight(int weight) {
