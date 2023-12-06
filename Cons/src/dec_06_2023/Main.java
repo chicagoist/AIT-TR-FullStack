@@ -20,3 +20,13 @@ public class Main {
         }
     }
 }
+/*Выхлоп:
+Voter name=Hans, age=43, address=Frankfurt
+Voter name=Jurgen, age=18, address=Hamburg
+Voter name=Jorg, age=16, address=Hanau
+
+Если 12 лет, тогда выхлоп:
+
+
+
+ */
