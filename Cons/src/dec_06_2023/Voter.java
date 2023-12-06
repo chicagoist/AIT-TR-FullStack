@@ -8,9 +8,9 @@ public class Voter {
     private String address;
 
     public Voter(String name, int age, String address) {
-        this.name = name;
+        setName(name);
         setAge(age);
-        this.address = address;
+        setAddress(address);
     }
 
     @Override
@@ -44,6 +44,7 @@ public class Voter {
             this.age = age;
         } else {
             System.out.println("Too young for vote" + this.toString());
+            Runtime.getRuntime().exit(age);
         }
     }
 
