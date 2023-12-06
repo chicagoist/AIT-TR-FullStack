@@ -39,6 +39,7 @@ public class Voter {
         this.address = address;
     }
 
+
     public void setAge(int age) {
         if(age >= 16) {
             this.age = age;
