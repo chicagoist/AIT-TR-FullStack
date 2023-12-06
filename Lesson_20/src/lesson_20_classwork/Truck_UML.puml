@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+class Truck {
+    private final String manufacturer;
+    private final int year;
+    private final String color;
+    private final int maxWeight;
+    private final int maxFuel;
+    private final String owner;
+
+    public Truck(String model, int year, String color, int maxWeight,
+                 int maxFuel, String owner)
+
+    public void load(int loadingWeight)
+    public void unload(int unloadingWeight)
+    public void toString()
+
+    }
+
+
+@enduml
