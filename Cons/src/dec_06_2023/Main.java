@@ -26,7 +26,9 @@ Voter name=Jurgen, age=18, address=Hamburg
 Voter name=Jorg, age=16, address=Hanau
 
 Если 12 лет, тогда выхлоп:
+Too young for voteVoter name=Jorg, age=0, address=null
 
+Process finished with exit code 12
 
 
  */
