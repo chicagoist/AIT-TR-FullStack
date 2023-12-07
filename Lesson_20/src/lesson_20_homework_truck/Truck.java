@@ -59,7 +59,7 @@ public class Truck {
 
 
     public void printRemainingCapacity() {
-        System.out.println("Current weight: "+getCurrentWeight());
+        System.out.println("Current weight: " + getCurrentWeight());
     }
 
     private int getCurrentWeight() {
@@ -90,7 +90,6 @@ public class Truck {
             Runtime.getRuntime().exit(weight);
         }
     }
-
 
 
     public void unload(int unloadingWeight) throws InterruptedException {
@@ -128,7 +127,8 @@ public class Truck {
             this.currentFuel += currentFuel;
         } else {
             System.out.println("The fuel is over capacity");
-            Runtime.getRuntime().exit(currentFuel);
+            return;
+            //Runtime.getRuntime().exit(currentFuel);
         }
     }
 
