@@ -20,6 +20,6 @@ public class Dog {
     }
 
     public String toString() {
-        return "County objects of Dog's class is =" + (getCounter());
+        return "County objects of Dog's class is =" + getCounter();
     }
 }
