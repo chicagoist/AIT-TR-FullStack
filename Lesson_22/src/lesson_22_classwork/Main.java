@@ -10,6 +10,8 @@ public class Main {
 
         System.out.println(Car.getCounter());
         System.out.println(car1.getCounter());
+        
 
+        
     }
 }
