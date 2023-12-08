@@ -22,7 +22,7 @@ public class Car {
         if(Arrays.binarySearch(arrayOfSalon, carToFind) >= 0) {
             System.out.println("This car is in stock " + carToFind);
         } else {
-            System.out.println("There is no such car, take it " + Arrays.toString(arrayOfSalon));
+            System.out.println("There is no such car, take it Ё " + Arrays.toString(arrayOfSalon));
         }
     }
 }
