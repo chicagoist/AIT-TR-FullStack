@@ -2,8 +2,6 @@ package lesson_22_classwork_railway;
 
 import java.util.Arrays;
 
-import static lesson_22_classwork_railway.Platform.Platforms.minPlatforms;
-
 /*
 Написать метод , находящий минимальное количество платформ, необходимых для
 приема поездов
@@ -32,7 +30,7 @@ public class Platform {
         int[] arrival = {100, 140, 150, 200, 215, 400};
         int[] departure = {110, 300, 220, 230, 315, 600};
 
-        int minPlatformsNeeded = minPlatforms(arrival, departure);
+        int minPlatformsNeeded = Platforms.minPlatforms(arrival, departure);
         System.out.println("Minimum number of platforms: " + minPlatformsNeeded);
     }
 
@@ -54,7 +52,8 @@ public class Platform {
                 if(arrival[i] <= departure[j]) {
                     platformsNeeded++;
                     i++;
-                    // Обновляем максимальное количество платформ, если требуемое больше
+                    // Обновляем максимальное количество платформ, если
+                    // требуемое больше
                     if(platformsNeeded > result) {
                         result = platformsNeeded;
                     }
