@@ -30,8 +30,7 @@ public class Platform {
         int[] arrival = {100, 140, 150, 200, 215, 400};
         int[] departure = {110, 300, 220, 230, 315, 600};
 
-        int minPlatformsNeeded = Platforms.minPlatforms(arrival, departure);
-        System.out.println("Minimum number of platforms: " + minPlatformsNeeded);
+        System.out.println("Minimum number of platforms: " + Platforms.minPlatforms(arrival, departure));
     }
 
 
