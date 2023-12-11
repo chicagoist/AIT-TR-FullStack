@@ -1,7 +1,5 @@
 package lesson_23_homework_calc;
 
-import java.util.Scanner;
-
 /*
 Задача 1
 
