@@ -15,39 +15,39 @@ package lesson_23_homework_calc;
 public class Main {
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
-        calculator.addingTwoNumbers(-2.0,3);
-        calculator.addingTwoNumbers(2.0,3);
-        calculator.addingTwoNumbers(2,3.0);
-        calculator.addingTwoNumbers(2,3);
-        calculator.addingTwoNumbers(2.0,3.0);
+       // Calculator calculator = new Calculator();
+        Calculator.addingTwoNumbers(-2.0,3);
+        Calculator.addingTwoNumbers(2.0,3);
+        Calculator.addingTwoNumbers(2,3.0);
+        Calculator.addingTwoNumbers(2,3);
+        Calculator.addingTwoNumbers(2.0,3.0);
         System.out.println("");
 
-        calculator.subtractingTwoNumbers(-2.0,3);
-        calculator.subtractingTwoNumbers(2.0,3);
-        calculator.subtractingTwoNumbers(2,3.0);
-        calculator.subtractingTwoNumbers(2,3);
-        calculator.subtractingTwoNumbers(2.0,3.0);
+        Calculator.subtractingTwoNumbers(-2.0,3);
+        Calculator.subtractingTwoNumbers(2.0,3);
+        Calculator.subtractingTwoNumbers(2,3.0);
+        Calculator.subtractingTwoNumbers(2,3);
+        Calculator.subtractingTwoNumbers(2.0,3.0);
         System.out.println("");
 
-        calculator.addingThreeNumbers(2,3,2);
-        calculator.addingThreeNumbers(2.0,3,2);
-        calculator.addingThreeNumbers(2.0,3.0,2);
-        calculator.addingThreeNumbers(2.0,3.0,2.0);
-        calculator.addingThreeNumbers(2,3.0,2.0);
-        calculator.addingThreeNumbers(2,3,2.0);
-        calculator.addingThreeNumbers(2.0,3,2.0);
-        calculator.addingThreeNumbers(2,3.0,2);
+        Calculator.addingThreeNumbers(2,3,2);
+        Calculator.addingThreeNumbers(2.0,3,2);
+        Calculator.addingThreeNumbers(2.0,3.0,2);
+        Calculator.addingThreeNumbers(2.0,3.0,2.0);
+        Calculator.addingThreeNumbers(2,3.0,2.0);
+        Calculator.addingThreeNumbers(2,3,2.0);
+        Calculator.addingThreeNumbers(2.0,3,2.0);
+        Calculator.addingThreeNumbers(2,3.0,2);
         System.out.println("");
 
-        calculator.subtractingThreeNumbers(4,5,6);
-        calculator.subtractingThreeNumbers(4.0,5,6);
-        calculator.subtractingThreeNumbers(4.0,5.0,6);
-        calculator.subtractingThreeNumbers(4.0,5.0,6.0);
-        calculator.subtractingThreeNumbers(4,5.0,6.0);
-        calculator.subtractingThreeNumbers(4,5,6.0);
-        calculator.subtractingThreeNumbers(4.0,5,6.0);
-        calculator.subtractingThreeNumbers(4,5.0,6);
+        Calculator.subtractingThreeNumbers(4,5,6);
+        Calculator.subtractingThreeNumbers(4.0,5,6);
+        Calculator.subtractingThreeNumbers(4.0,5.0,6);
+        Calculator.subtractingThreeNumbers(4.0,5.0,6.0);
+        Calculator.subtractingThreeNumbers(4,5.0,6.0);
+        Calculator.subtractingThreeNumbers(4,5,6.0);
+        Calculator.subtractingThreeNumbers(4.0,5,6.0);
+        Calculator.subtractingThreeNumbers(4,5.0,6);
 
 
     }
