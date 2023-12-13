@@ -2,10 +2,10 @@ package lesson_25_homework_truck;
 
 public class Truck extends Vehicle {
 
-    protected int currentWeight = 0;
-    protected int currentFuel = 0;
-    protected String owner;
-    protected int maxFuel;
+    private int currentWeight = 0;
+    private int currentFuel = 0;
+    private String owner;
+    private int maxFuel;
 
     public Truck(String model, String manufacturer, int year, String color,
                  int maxWeight, int maxFuel, String owner, int currentWeight,

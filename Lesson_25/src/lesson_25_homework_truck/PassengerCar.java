@@ -2,9 +2,9 @@ package lesson_25_homework_truck;
 
 public class PassengerCar extends Vehicle {
 
-    protected int numberOfPassengers = 0;
-    protected int numberOfDoors = 0;
-    protected int maxFuel = 0;
+    private int numberOfPassengers = 0;
+    private int numberOfDoors = 0;
+    private int maxFuel = 0;
 
     public PassengerCar(String model, String manufacturer, int year,
                         String color,
@@ -18,7 +18,7 @@ public class PassengerCar extends Vehicle {
         this.maxFuel = maxFuel;
     }
 
-    public void infoOfPassengerCar() {
+    protected void infoOfPassengerCar() {
         System.out.println("The model is " + "\"" + model + "\"" + ", " +
                 "manufactured by " + "\"" + manufacturer + "\"" + ", " +
                 "production year is " + year + ", maximum load is " + maxWeight

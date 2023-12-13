@@ -17,7 +17,7 @@ public class Vehicle {
         this.maxWeight = maxWeight;
     }
 
-    protected void infoOfVehicle() {
+    public void infoOfVehicle() {
         System.out.println("The model is " + "\"" + model + "\"" + ", " +
                 "manufactured by " + "\"" + manufacturer + "\"" + ", " +
                 "production year is " + year + ", maximum load is "
@@ -25,7 +25,7 @@ public class Vehicle {
     }
 
 
-    public void infoOfPassengerCar() {}
+    protected void infoOfPassengerCar() {}
 
     protected void infoOfTruck() {}
 }

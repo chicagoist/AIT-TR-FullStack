@@ -12,6 +12,7 @@ public class Main {
         vehicle.infoOfVehicle();
         passengerCar.infoOfPassengerCar();
         truck.infoOfTruck();
+
         /*OUT
         The model is "", manufactured by "", production year is 1974, maximum
         load is 20000kg, the color is
