@@ -17,9 +17,4 @@ public class Pupil {
         this.schoolNumber = schoolNumber;
         this.classRoom = classRoom;
     }
-
-    protected void studySome() {
-
-    }
-
 }
