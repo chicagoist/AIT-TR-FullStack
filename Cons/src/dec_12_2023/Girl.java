@@ -2,12 +2,12 @@ package dec_12_2023;
 
 public class Girl extends Pupil {
 
-    public String sex;
+    public String gender;
 
     public Girl(String name, String lastname, int age, int schoolNumber,
-                String classRoom, String sex) {
+                String classRoom, String gender) {
         super(name, lastname, age, schoolNumber, classRoom);
-        this.sex = sex;
+        this.gender = gender;
     }
 
     public String work() {
@@ -16,6 +16,6 @@ public class Girl extends Pupil {
 
     public String toString() {
         return "First name = " + this.name + ", Second name = " + this.lastname + ", age = " + this.age + ". She is a "
-                + sex + " and " + this.work();
+                + gender + " and " + this.work();
     }
 }
