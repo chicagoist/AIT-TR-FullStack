@@ -2,11 +2,6 @@ package lesson_26_homework;
 
 public class Geometry {
 
-    protected double pi = Math.PI;
-    protected double circleArea;
-    protected double rectangleArea;
-    protected double squareArea;
-
     protected void squareArea(double a) {
         // S = a2
     }
