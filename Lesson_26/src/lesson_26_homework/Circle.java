@@ -6,8 +6,7 @@ public class Circle extends Geometry {
 
     protected void circleArea(double radius) {
         //S = π * r2
-        double pi = Math.PI;
-        this.circleArea = pi * Math.pow(radius, 2);
+        this.circleArea = Math.PI * Math.pow(radius, 2);
     }
 
     public String toString() {
