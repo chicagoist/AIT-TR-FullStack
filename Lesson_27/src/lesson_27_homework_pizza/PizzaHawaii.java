@@ -21,7 +21,7 @@ public class PizzaHawaii extends Pizza {
     @Override
     public void bake() {
         super.bake();
-        System.out.println("\""+ getNameOfPizza() + "\".");
+        System.out.println("\"" + getNameOfPizza() + "\".");
     }
 
     public String toString() {

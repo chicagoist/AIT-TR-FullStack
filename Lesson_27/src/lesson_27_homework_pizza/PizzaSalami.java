@@ -7,6 +7,7 @@ public class PizzaSalami extends Pizza {
     public PizzaSalami(String typeOfPizza) {
         this.nameOfPizza = typeOfPizza;
     }
+
     public String getNameOfPizza() {
         return nameOfPizza;
     }
@@ -20,7 +21,7 @@ public class PizzaSalami extends Pizza {
     @Override
     public void bake() {
         super.bake();
-        System.out.println("\""+ getNameOfPizza() + "\".");
+        System.out.println("\"" + getNameOfPizza() + "\".");
     }
 
     public String toString() {

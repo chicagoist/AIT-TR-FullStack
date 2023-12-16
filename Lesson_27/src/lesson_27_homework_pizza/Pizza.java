@@ -6,9 +6,7 @@ import java.io.InputStreamReader;
 
 public class Pizza {
     void prepare() {
-
         System.out.print("Мы создаём для вас пиццу ");
-
     }
 
     public void bake() {
@@ -24,19 +22,17 @@ public class Pizza {
                     new BufferedReader(new InputStreamReader(System.in)).readLine();
 
             if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")) {
-                OnlinePizzaShop.choosePizza();
+                OnlinePizzaShop.choosePizza(); //Повторный вызов метода для
+                // заказа пиццы
             } else {
                 System.out.println("Спасибо за посещение нашей пиццерии. До " +
                         "свидания!");
-                return;
             }
-
-            OnlinePizzaShop.choosePizza();
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
-
     }
+
     public String toString() {
         return "Вы выбрали пиццу ";
     }

@@ -19,18 +19,21 @@ public class OnlinePizzaShop {
         int index = 0;
 
         for(String typeOfPizza : arrayOfPizzasName) {
-            System.out.println("Пицца " + typeOfPizza + " : " + ++index);
+            System.out.println("Пицца " + "\""+typeOfPizza+"\"" + " : " + ++index);
         }
 
         System.out.print("Выберити номер желаемой пиццы : ");
 
-        while(!myScanner.hasNextInt()) {
+        while(!myScanner.hasNextInt()) { // Ввод только цифр!!!
             System.out.print("Это не число! Пожалуйста, введите число: ");
             myScanner.next();
         }
 
-        int pizzaNumber = myScanner.nextInt();
-        if(pizzaNumber < 1 || pizzaNumber > arrayOfPizzasName.length) {
+        int pizzaNumber = myScanner.nextInt(); // Номер пиццы из списка
+
+        if(pizzaNumber < 1 || pizzaNumber > arrayOfPizzasName.length) { //
+            // Ещё одна проверка номера пиццы, чтобы не вышел за размеры массива
+
             System.out.print("Это был не верный номер. Желаете попробовать " +
                     "ещё раз? [Y]es/[N]o: ");
             String myanswer =
@@ -50,12 +53,12 @@ public class OnlinePizzaShop {
             Pizza newPizza =
                     PizzaChoice.orderPizza(arrayOfPizzasName[pizzaNumber - 1]);
             assert newPizza != null;
-            System.out.println(newPizza.toString());
+            System.out.println(newPizza);
             newPizza.prepare();
             newPizza.bake();
             newPizza.pack();
 
-        } else {
+        } else { // Излишняя проверка
             System.out.print("Ошибочный номер, Желаете попробовать ещё " +
                     "раз? " +
                     "[Y]es/[N]o: ");
