@@ -2,14 +2,14 @@ package lesson_27_homework_pizza;
 
 public class PizzaChoice {
 
-    public Pizza orderPizza(String typeOfPizza) {
+    public static Pizza orderPizza(String typeOfPizza) {
 
         if("Гавайи".equalsIgnoreCase(typeOfPizza)){
-            return new PizzaHawaii();
+            return new PizzaHawaii(typeOfPizza);
         } else if("Салями".equalsIgnoreCase(typeOfPizza)) {
-            return new PizzaSalami();
+            return new PizzaSalami(typeOfPizza);
         } else if("Маргарита".equalsIgnoreCase(typeOfPizza)) {
-            return new PizzaMargarita();
+            return new PizzaMargarita(typeOfPizza);
         }
         return null;
     }
