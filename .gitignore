@@ -4,7 +4,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-!*.iml
+*.iml
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -31,16 +31,16 @@
 cmake-build-*/
 
 # Mongo Explorer plugin
-.idea/**/mongoSettings.xml
+!.idea/**/mongoSettings.xml
 
 # File-based project format
-*.iws
+!*.iws
 
 # IntelliJ
 out/
 
 # mpeltonen/sbt-idea plugin
-.idea_modules/
+!.idea_modules/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
