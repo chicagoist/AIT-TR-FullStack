@@ -4,7 +4,7 @@
 
 [Учебный центр AIT](https://www.ait-tr.de/)
 
-As with most things in life, there is no single right or wrong way to approach a problem. There 
+"As with most things in life, there is no single right or wrong way to approach a problem. There 
 are usually many ways to tackle the same problem. So when attempting to design an OO solu-
 tion, don’t get hung up in trying to do a perfect design the first time (there will always be room 
 for improvement). What you really need to do is brainstorm and let your thought process go 
@@ -17,7 +17,10 @@ are fundamental to the business problem. For example, you can’t design a wirel
 without wireless technology. However, it is often the case that you will have more than one 
 software solution to consider.  
 Thus, before you start to design a system, or even a class, think the problem through and have 
-some fun!
+some fun!"
 
-"The Object-Oriented Thought Process"
-                    -- Matt Weisfeld 
+#### "The Object-Oriented Thought Process"
+                    
+-- _Matt Weisfeld_ 
+
+
