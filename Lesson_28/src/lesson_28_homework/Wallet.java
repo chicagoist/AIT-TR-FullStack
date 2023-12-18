@@ -10,15 +10,14 @@ public class Wallet {
 
     @Override
     public String toString() {
-        return "Wallet{" +
-                "coins1 = " + sweetMoney.getCoins1() +
-                ", coins5 = " + sweetMoney.getCoins5() +
-                ", coins10 = " + sweetMoney.getCoins10() +
-                ", coins25 = " + sweetMoney.getCoins25() +
-                ", banknote5 = " + sweetMoney.getBanknote5() +
-                ", banknote10 = " + sweetMoney.getBanknote10() +
-                ", banknote20 = " + sweetMoney.getBanknote20() +
-                ", banknote50 = " + sweetMoney.getBanknote50() +
-                '}';
+        return String.format("coins1=%d, coins5=%d, coins10=%d, " +
+                        "coins25=%d, " +
+                        "banknote5=%d, banknote10=%d, banknote20=%d, " +
+                        "banknote50=%d",
+                sweetMoney.getCoins1(), sweetMoney.getCoins5(),
+                sweetMoney.getCoins10(),
+                sweetMoney.getCoins25(), sweetMoney.getBanknote5(),
+                sweetMoney.getBanknote10(),
+                sweetMoney.getBanknote20(), sweetMoney.getBanknote50());
     }
 }

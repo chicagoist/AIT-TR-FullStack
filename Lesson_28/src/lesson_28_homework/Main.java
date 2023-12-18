@@ -15,9 +15,10 @@ public class Main {
 
         Wallet[] arrayOfWallets = new Wallet[]{wallet1, wallet2, wallet3};
 
-        for(Wallet element : arrayOfWallets) {
-            System.out.println("That's exactly how much money is in the " + ": " + element.toString());
-            System.out.println(" ");
+        for (int i = 0; i < arrayOfWallets.length; i++) {
+            System.out.println("Wallet " + (i + 1) + ": " + arrayOfWallets[i]);
+            System.out.println();
         }
+
     }
 }
