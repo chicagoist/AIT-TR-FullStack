@@ -15,6 +15,7 @@ public class Main {
 
         Wallet[] arrayOfWallets = new Wallet[]{wallet1, wallet2, wallet3};
 
+        // информацию о номере кошелька при выводе:
         for (int i = 0; i < arrayOfWallets.length; i++) {
             System.out.println("Wallet " + (i + 1) + ": " + arrayOfWallets[i]);
             System.out.println();
