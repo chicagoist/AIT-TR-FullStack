@@ -1,4 +1,4 @@
-package lesson_29_classwork_garden;
+package lesson_29_homework_garden;
 
 /*
 Алгоритм создания Java-приложения для проекта "Садовод-любитель":

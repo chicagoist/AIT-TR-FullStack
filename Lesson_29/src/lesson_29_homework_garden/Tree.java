@@ -1,4 +1,4 @@
-package lesson_29_classwork_garden;
+package lesson_29_homework_garden;
 
 class Tree extends Plant {
 
