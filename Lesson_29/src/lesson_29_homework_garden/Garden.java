@@ -64,7 +64,7 @@ public class Garden {
         obj.setAge(years);
 
         for(int i = 0; i < years; i++) {
-            Arrays.stream(arrayOfSeason).forEach(season -> {
+            Arrays.stream(arrayOfSeason).forEach(season -> { // Вместо foreach
                 if(season.equalsIgnoreCase("Spring")) {
                     obj.doSpring();
                 } else if(season.equalsIgnoreCase("Summer")) {
