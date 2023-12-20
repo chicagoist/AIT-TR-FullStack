@@ -41,9 +41,11 @@ import java.util.Scanner;
 public class Garden {
     public static void main(String[] args) {
 
+        // Передаём аргументы в конструктор: название, дрлину ростка
         Plant flowerPupil = new Flower("Pupil", 10);
         growPlants(flowerPupil);
 
+        // Передаём аргументы в конструктор: название, дрлину ростка
         Plant treeOak = new Tree("Oak", 10);
         growPlants(treeOak);
     }
