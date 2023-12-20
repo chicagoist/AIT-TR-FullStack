@@ -19,11 +19,14 @@ abstract class Plant {
         return age;
     }
 
-    public void setAge(int age){}
+    public void setAge(int age) {
+    }
 
-    protected void doSummer() {}
+    protected void doSummer() {
+    }
 
-    protected void doAutumn() {}
+    protected void doAutumn() {
+    }
 
     protected abstract void doSpring();
 
@@ -34,7 +37,5 @@ abstract class Plant {
         return height;
     }
 
-    protected void setHeight(int height) {
-        this.height = height;
-    }
 }
+
