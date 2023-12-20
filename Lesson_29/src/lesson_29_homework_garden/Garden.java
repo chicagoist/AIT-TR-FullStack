@@ -36,6 +36,7 @@ package lesson_29_homework_garden;
  */
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Garden {
@@ -63,7 +64,7 @@ public class Garden {
         obj.setAge(years);
 
         for(int i = 0; i < years; i++) {
-            for(String season : arrayOfSeason) {
+            Arrays.stream(arrayOfSeason).forEach(season -> {
                 if(season.equalsIgnoreCase("Spring")) {
                     obj.doSpring();
                 } else if(season.equalsIgnoreCase("Summer")) {
@@ -73,7 +74,7 @@ public class Garden {
                 } else if(season.equalsIgnoreCase("Winter")) {
                     obj.doWinter();
                 }
-            }
+            });
         }
         System.out.println(obj.getName() + " has height: " + obj.getHeight() + " and " +
                 "is " + obj.getAge() + " years old");
