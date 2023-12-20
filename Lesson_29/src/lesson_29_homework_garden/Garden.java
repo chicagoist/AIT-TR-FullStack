@@ -51,7 +51,7 @@ public class Garden {
         growPlants(treeOak);
     }
 
-    public static void growPlants(Plant obj) {
+    public static void growPlants(Plant obj) { // ВОПРОС???
 
         String[] arrayOfSeason = {"Spring", "Summer", "Autumn", "Winter" };
         Scanner myScanner = new Scanner(System.in);
