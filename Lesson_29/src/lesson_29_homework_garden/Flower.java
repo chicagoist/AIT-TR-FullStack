@@ -22,6 +22,6 @@ class Flower extends Plant {
     }
 
     public void setAge(int years) {
-        Plant.age = years;
+        age = years;
     }
 }

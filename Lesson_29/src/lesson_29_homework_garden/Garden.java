@@ -62,7 +62,6 @@ public class Garden {
         final int years = myScanner.nextInt();
         obj.setAge(years);
 
-
         for(int i = 0; i < years; i++) {
             for(String season : arrayOfSeason) {
                 if(season.equalsIgnoreCase("Spring")) {
@@ -76,7 +75,6 @@ public class Garden {
                 }
             }
         }
-       // myScanner.close();
         System.out.println(obj.getName() + " has height: " + obj.getHeight() + " and " +
                 "is " + obj.getAge() + " years old");
     }
