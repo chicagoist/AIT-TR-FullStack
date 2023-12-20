@@ -1,6 +1,6 @@
 package lesson_29_homework_garden;
 
-abstract class Plant {
+public abstract class Plant {
 
     protected String name = "";
     protected int height = 0;
