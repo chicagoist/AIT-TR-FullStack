@@ -2,9 +2,9 @@ package lesson_29_homework_garden;
 
 public abstract class Plant {
 
-    protected String name = "";
-    protected int height = 0;
-    protected static int age = 0;
+    protected String name;
+    protected int height;
+    protected static int age;
 
     public Plant(String nameOfPlant, int height) {
         name = nameOfPlant;
