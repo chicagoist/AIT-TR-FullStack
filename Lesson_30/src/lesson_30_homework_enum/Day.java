@@ -6,7 +6,7 @@ public class Day {
     private final Week[] WEEKENDS = { Week.SATURDAY, Week.SUNDAY };
 
     Day(String weekDay) {
-        try {
+        try {// проверку предложила IDEA
             this.day = Week.valueOf(weekDay.toUpperCase()).name();
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Invalid day entered");
