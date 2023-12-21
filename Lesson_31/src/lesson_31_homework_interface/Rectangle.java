@@ -1,57 +1,24 @@
 package lesson_31_homework_interface;
 
-public class Rectangle implements Shape{
+public class Rectangle implements Shape {
 
-    private double perimeterOfRectangle;
-    private double areaOfRectangle;
+    private final double length;
+    private final double width;
 
-    public Rectangle(double a, double b) {
-        rectanglePerimeter(a,b);
-        rectangleArea(a, b);
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
     }
 
     @Override
-    public void rectanglePerimeter(double side_a, double side_b) {
+    public double calculatePerimeter() {
         // P = 2 * ( a + b )
-        this.perimeterOfRectangle = 2 * (side_a + side_b);
+        return 2 * (length + width);
     }
 
     @Override
-    public void rectangleArea(double side_a, double side_b) {
+    public double calculateArea() {
         // S = a * b
-        this.areaOfRectangle = side_a * side_b;
-    }
-
-    public double getPerimeterOfRectangle() {
-        return perimeterOfRectangle;
-    }
-
-    public double getAreaOfRectangle() {
-        return areaOfRectangle;
-    }
-
-
-
-
-
-    @Override
-    public double getCircumference() {
-        return 0;
-    }
-
-    @Override
-    public double getAreaOfcircle() {
-        return 0;
-    }
-
-
-    @Override
-    public void circleArea(double radius) {
-
-    }
-
-    @Override
-    public void circlePerimeter(double radius) {
-
+        return this.length * this.width;
     }
 }
