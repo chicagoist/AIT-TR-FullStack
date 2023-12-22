@@ -21,7 +21,7 @@ git add .
 Добавляем коммит и пушим:
 
 git commit -m "Remove .idea from index"
-git push -u origin main
+git push -u origin Main
 
 
 -----------------------------------------------------------------------------------
