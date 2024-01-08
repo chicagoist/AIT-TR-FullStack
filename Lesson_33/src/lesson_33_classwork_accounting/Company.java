@@ -1,39 +1,44 @@
 package lesson_33_classwork_accounting;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Company {
-    private List<Employee> employees;
 
-    public Company(List<Employee> employees) {
-        this.employees = employees;
+    private final List<Employee> employees; // создаём списочный массив для
+    // удобства работы
+
+    public Company() {
+        employees = new ArrayList<>(); // инициализируем массив в конструкторе
     }
 
-    public void addEmployee(Employee employee) {
-        employees.add(employee);
+    public boolean addEmployee(Employee employee) {
+        return employees.add(employee);
     }
 
-    public void removeEmployee(Employee employee) {
-        employees.remove(employee);
+    public boolean removeEmployee(Employee employee) {
+        if(employees.contains(employee)) { // проверка на ошибку
+            employees.remove(employee);
+            return true;
+        }
+        return false;
     }
 
-    public void displayEmployees() {
-        for (Employee employee : employees) {
-            System.out.println(employee.toString());
+    public void display() {
+        for(Employee emp : employees) {
+            System.out.println(emp);
         }
     }
 
-    public double calculateTotalSalaries() {
-        double totalSalaries = 0.0;
-        for (Employee employee : employees) {
-            totalSalaries += employee.calculateSalary();
+    public double sumSalary() {
+        double sum = 0;
+        for(Employee emp : employees) {
+            sum += emp.calculateSalary();
         }
-        return totalSalaries;
+        return sum;
     }
 
-/*    @Override
-    public String toString() {
-        return "Company{"+ displayEmployees() +
-                '}';
-    }*/
+    public List<Employee> getEmployees() {
+        return employees;
+    }
 }

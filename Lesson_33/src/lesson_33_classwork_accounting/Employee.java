@@ -1,19 +1,25 @@
 package lesson_33_classwork_accounting;
 
 // Абстрактный класс Employee
-public abstract class Employee<MIN_WAGE> {
+public abstract class Employee {
+    private static final double MIN_WAGE = 8.0;
     private int id;
-    double hours;
-    private String name;
-    private String secondName;
-    static double MIN_WAGE = 13.0;
+    private String firstName;
+    private String lastName;
+    private double hour;
 
-/*    public Employee(int id, double hours, String name, String secondName) {
+    public Employee(int id, String firstName, String lastName, double hour) {
         this.id = id;
-        this.hours = hours;
-        this.name = name;
-        this.secondName = secondName;
-    }*/
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.hour = hour;
+    }
+
+    public abstract double calculateSalary();
+
+    public double getMinWage() {
+        return MIN_WAGE;
+    }
 
     public int getId() {
         return id;
@@ -23,30 +29,40 @@ public abstract class Employee<MIN_WAGE> {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public double getHour() {
+        return hour;
+    }
+
+
+    public void setHour(double hour) {
+        this.hour = hour;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", secondName='" + secondName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", hour=" + hour +
                 '}';
     }
 
-    public abstract double calculateSalary(); // Абстрактный метод для расчета зарплаты
+
 }

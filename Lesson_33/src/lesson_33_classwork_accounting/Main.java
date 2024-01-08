@@ -1,22 +1,62 @@
 package lesson_33_classwork_accounting;
 
 /* UML
- _____________________         _____________________
-|       Employee      |       |      Company        |
-| - id: int           |       | - employees: List<> |
-| - name: String      |       |_____________________|
-| - secondName: String|
-|_____________________|
-          |
-    ______|______
-   |             |
-   | WageEmployee|
-   |_____________|
-          |
-    ______|______
-   |             |
-   |SalesManager |
-   |_____________|
++------------------------------------------+
+|                  Company                 |
++------------------------------------------+
+| - employees: List<Employee>              |
++------------------------------------------+
+| + addEmployee(Employee): boolean         |
+| + removeEmployee(Employee): boolean      |
+| + display(): void                        |
+| + sumSalary(): double                    |
+| + getEmployees(): List<Employee>         |
++------------------------------------------+
+
++------------------------------------------+
+|                Employee                  |
++------------------------------------------+
+| - id: int                                |
+| - firstName: String                      |
+| - lastName: String                       |
+| - hour: double                           |
++------------------------------------------+
+| + Employee(id: int, firstName: String,   |
+|   lastName: String, hour: double)        |
+| + abstract calculateSalary(): double     |
+| + getters and setters                    |
+| + toString(): String                     |
++------------------------------------------+
+
++------------------------------------------+
+|            WageEmployee                  |
++------------------------------------------+
+| - wage: double                           |
++------------------------------------------+
+| + WageEmployee(id: int, firstName:      |
+|   String, lastName: String, hour:       |
+|   double, wage: double)                  |
+| + getWage(): double                      |
+| + calculateSalary(): double              |
+| + toString(): String                     |
++------------------------------------------+
+
++------------------------------------------+
+|           SalesManager                   |
++------------------------------------------+
+| - salesVolume: double                    |
+| - percent: double                        |
++------------------------------------------+
+| + SalesManager(id: int, firstName:      |
+|   String, lastName: String, hour:       |
+|   double, salesVolume: double,           |
+|   percent: double)                       |
+| + getSalesVolume(): double               |
+| + getPercent(): double                   |
+| + calculateSalary(): double              |
+| + toString(): String                     |
++------------------------------------------+
+
 
  */
 
@@ -44,20 +84,49 @@ package lesson_33_classwork_accounting;
        8. Программа должна быть написана с использованием свойств наследования
  */
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
+        Company company = new Company();
 
-        List<Employee> employees = new ArrayList<>();
+        Employee salesManager1 = new SalesManager(1, "John", "Doe", 160, 20000, 0.1);
+        Employee freeLancer1 = new WageEmployee(2, "Jane", "Smith", 160, 25);
 
-        Employee worker1 = new WageEmployee("Ivan", "Ivanov", 16, 8, 35);
-        employees.add(worker1);
-        Company accountingForWorkers = new Company(employees);
-        System.out.println(accountingForWorkers.calculateTotalSalaries());
-        accountingForWorkers.displayEmployees();
+        company.addEmployee(salesManager1);
+        company.addEmployee(freeLancer1);
 
+        System.out.println("\nTotal salary for all employees: " + company.sumSalary());
 
+        System.out.println("Salary for each employee:");
+        for (Employee emp : company.getEmployees()) {
+            System.out.println(emp.getFirstName() + " " + emp.getLastName() +
+                    ": " + emp.calculateSalary());
+            }
+
+        System.out.println("toString for each employee:");
+        for (Employee emp : company.getEmployees()) {
+            System.out.println(emp.toString() + ", calculateSalary = " + emp.calculateSalary());
+        }
+
+        // Удаляем одного из сотрудников
+        if (!company.getEmployees().isEmpty()) { // проверяем на ошибку
+//            Employee employeeToRemove =
+//                    company.getEmployees().get(freeLancer1.getId());
+
+            company.removeEmployee(freeLancer1);
+            System.out.println("\nRemoved employee: " + freeLancer1.getFirstName() +
+                    " " + freeLancer1.getLastName());
+
+            System.out.println("Total salary after removing one employee: " + company.sumSalary());
+        } else {
+            System.out.println("\nNo employees to remove.");
+        }
+
+        System.out.println("Salary for each employee:");
+        for (Employee emp : company.getEmployees()) {
+            System.out.println(emp.getFirstName() + " " + emp.getLastName() + ": " + emp.calculateSalary());
+        }
     }
 }
+
