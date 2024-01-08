@@ -473,3 +473,4 @@ obj/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,kotlin,android,androidstudio,maven,gradle,jetbrains,jetbrains+all,jetbrains+iml,cmake
 
+/Lesson_27/FactoryGPT.txt
