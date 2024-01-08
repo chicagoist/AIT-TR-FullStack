@@ -3,7 +3,9 @@ package lesson_32_classwork_words;
 public class WordChanger implements Wordelized {
     @Override
     public String changeWords(String input) {
+
         String[] words = input.split(" ");
+
         StringBuilder result = new StringBuilder();
 
         for (String word : words) {

@@ -19,7 +19,7 @@ public class Company {
 
     public void displayEmployees() {
         for (Employee employee : employees) {
-            // Вывод информации о сотруднике на экран
+            System.out.println(employee.toString());
         }
     }
 
@@ -31,5 +31,9 @@ public class Company {
         return totalSalaries;
     }
 
-    // Дополнительные методы для управления штатом компании
+/*    @Override
+    public String toString() {
+        return "Company{"+ displayEmployees() +
+                '}';
+    }*/
 }
