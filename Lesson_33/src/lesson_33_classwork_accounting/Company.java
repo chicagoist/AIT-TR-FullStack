@@ -19,9 +19,10 @@ public class Company {
     public boolean removeEmployee(Employee employee) {
         if(employees.contains(employee)) { // проверка на ошибку
             employees.remove(employee);
-            return true;
+            return true; // обязательно выводить true ?
+        } else {
+            return false;
         }
-        return false; // обязательно выводить true ?
     }
 
     public void display() {
