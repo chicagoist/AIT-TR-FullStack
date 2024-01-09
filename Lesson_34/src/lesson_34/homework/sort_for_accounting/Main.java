@@ -5,6 +5,8 @@ package lesson_34.homework.sort_for_accounting;
 элементов начала и конца сортировки)
  */
 
+
+// РЕАЛИЗАЦИЯ
 // class Employee: public int compareTo(Employee obj)
 // class Company:  public void sort()
 
