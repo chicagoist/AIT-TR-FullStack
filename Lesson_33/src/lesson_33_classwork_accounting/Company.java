@@ -21,7 +21,7 @@ public class Company {
             employees.remove(employee);
             return true;
         }
-        return false;
+        return false; // обязательно выводить true ?
     }
 
     public void display() {
