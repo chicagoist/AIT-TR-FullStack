@@ -52,7 +52,7 @@ public class Main {
         animals.sort(lastCharacterOfNameComporator);
 
         for(Animal animal : animals) {
-            System.out.println(animal);
+            System.out.println(animal.getName());
 
         }
     }
@@ -79,10 +79,10 @@ Animal{name='fox', color='Red', weight=5}
 Animal{name='wolf', color='Gray', weight=50}
 
 After last name's character sorting:
-Animal{name='anaconda', color='Camoo', weight=150}
-Animal{name='wolf', color='Gray', weight=50}
-Animal{name='bear', color='Braun', weight=200}
-Animal{name='fox', color='Red', weight=5}
+anaconda
+wolf
+bear
+fox
 
 Process finished with exit code 0
 
