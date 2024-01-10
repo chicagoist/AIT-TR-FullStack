@@ -1,7 +1,7 @@
 package lesson_35.homework.sort_of_accounting;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Company {
@@ -42,6 +42,10 @@ public class Company {
 
     public List<Employee> getEmployees() {
         return employees;
+    }
+
+    public void sort(Comparator<Employee> comparator) {
+        employees.sort(comparator);
     }
 
 }

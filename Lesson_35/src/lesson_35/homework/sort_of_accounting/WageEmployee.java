@@ -1,7 +1,5 @@
 package lesson_35.homework.sort_of_accounting;
 
-import java.util.Comparator;
-
 // Класс WageEmployee наследуется от Employee
 public class WageEmployee extends Employee {
 
@@ -29,7 +27,7 @@ public class WageEmployee extends Employee {
     @Override
     public String toString() {
         return "WageEmployee{" +
-                "wage=" + wage +
+                "wage=" + getWage() +
                 '}' + super.toString();
     }
 }

@@ -1,7 +1,5 @@
 package lesson_35.homework.sort_of_accounting;
 
-import java.util.Comparator;
-
 // Класс SalesManager наследуется от Employee
 public class SalesManager extends Employee {
 
@@ -38,10 +36,5 @@ public class SalesManager extends Employee {
                 "salesVolume=" + salesVolume +
                 ", percent=" + percent +
                 '}' + super.toString();
-    }
-
-    @Override
-    public int compareTo(Employee o) {
-        return 0;
     }
 }
