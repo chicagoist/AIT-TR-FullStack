@@ -23,7 +23,6 @@ public class Main {
                 new LastCharacterOfNameComporator();
 
 
-
         System.out.println();
         System.out.println("After weigt's sorting: ");
         animals.sort(weightComporator);
@@ -50,7 +49,31 @@ public class Main {
             System.out.println(animal);
 
         }
-
-
     }
 }
+
+/* OUTPUT
+
+After weigt's sorting:
+Animal{name='fox', color='Red', weight=5}
+Animal{name='wolf', color='Gray', weight=50}
+Animal{name='anaconda', color='Camoo', weight=150}
+Animal{name='bear', color='Braun', weight=200}
+
+After name's sorting:
+Animal{name='anaconda', color='Camoo', weight=150}
+Animal{name='bear', color='Braun', weight=200}
+Animal{name='fox', color='Red', weight=5}
+Animal{name='wolf', color='Gray', weight=50}
+
+After last name's character sorting:
+Animal{name='anaconda', color='Camoo', weight=150}
+Animal{name='wolf', color='Gray', weight=50}
+Animal{name='bear', color='Braun', weight=200}
+Animal{name='fox', color='Red', weight=5}
+
+Process finished with exit code 0
+
+
+
+ */
