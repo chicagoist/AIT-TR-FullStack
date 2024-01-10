@@ -3,6 +3,30 @@ package lesson_35.classwork.practice;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+    Создать класс Animal c полями name, weight, colour.
+    Используя компараторы вывести на экран в классе Main  список животных, упорядоченный по
+    следующим параметрам:
+    -по имени
+    -по весу
+    - список названий животных, упорядоченный по возрастанию последней буквы имени
+    Wolf
+    Bear
+    Elephant
+    Anakonda
+    Fox
+
+
+Anakonda
+Wolf
+Bear
+Elephant
+Fox
+     */
+
+
+ */
+
 public class Main {
     public static void main(String[] args) {
         Animal wolf = new Animal("wolf", "Gray", 50);
