@@ -27,11 +27,10 @@ public class Main {
         System.out.println("Without sorting: ");
         for(Animal animal : animals) {
             System.out.println(animal);
-
         }
 
         System.out.println();
-        System.out.println("After weigt's sorting: ");
+        System.out.println("After weight's sorting: ");
         animals.sort(weightComporator);
 
         for(Animal animal : animals) {
@@ -60,6 +59,12 @@ public class Main {
 }
 
 /* OUTPUT
+
+Without sorting:
+Animal{name='wolf', color='Gray', weight=50}
+Animal{name='bear', color='Braun', weight=200}
+Animal{name='fox', color='Red', weight=5}
+Animal{name='anaconda', color='Camoo', weight=150}
 
 After weigt's sorting:
 Animal{name='fox', color='Red', weight=5}

@@ -10,6 +10,7 @@ public class LastCharacterOfNameComporator implements Comparator<Animal> {
         String reverseNameo2 =
                 new StringBuilder(o2.getName()).reverse().toString();
 
+        //return CharSequence.compare(reverseNameo1, reverseNameo2);
         return reverseNameo1.compareTo(reverseNameo2);
     }
 }
