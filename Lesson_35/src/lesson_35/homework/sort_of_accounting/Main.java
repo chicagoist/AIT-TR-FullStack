@@ -10,7 +10,7 @@ package lesson_35.homework.sort_of_accounting;
 // РЕАЛИЗАЦИЯ
 // class NameCorporator and method compare()
 // class IdCorporator and method compare()
-// class Company and
+// class Company and method sort()
 
 
 public class Main {
