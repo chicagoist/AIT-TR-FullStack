@@ -24,9 +24,6 @@ Elephant
 Fox
      */
 
-
- */
-
 public class Main {
     public static void main(String[] args) {
         Animal wolf = new Animal("wolf", "Gray", 50);
