@@ -24,6 +24,13 @@ public class Main {
 
 
         System.out.println();
+        System.out.println("Without sorting: ");
+        for(Animal animal : animals) {
+            System.out.println(animal);
+
+        }
+
+        System.out.println();
         System.out.println("After weigt's sorting: ");
         animals.sort(weightComporator);
 
