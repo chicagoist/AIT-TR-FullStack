@@ -20,7 +20,7 @@ captures/
 output.json
 
 # IntelliJ
-*.iml
+!*.iml
 !.idea/
 !misc.xml
 !deploymentTargetDropDown.xml
