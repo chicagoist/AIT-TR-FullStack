@@ -35,8 +35,7 @@ public class OurArrayList<E> implements OurList<E> {
 
   @Override
   public void set(E value, int index) {
-    if(index >= size || index < 0)
-      return ;
+    if (index >= size || index < 0) return;
     array[index] = value;
   }
 
@@ -56,7 +55,7 @@ public class OurArrayList<E> implements OurList<E> {
       System.arraycopy(array, 0, newArray, 0, size);
       array = newArray;
 
-      System.out.printf("Inner array size increased: %s->%s",oldLength, newLength);
+      System.out.printf("Inner array size increased: %s->%s", oldLength, newLength);
     }
 
     if (index < size) {
@@ -70,9 +69,8 @@ public class OurArrayList<E> implements OurList<E> {
 
   @Override
   public E get(int index) {
-    if(index >= size || index < 0)
-      return null;
-    return(E) array[index];
+    if (index >= size || index < 0) return null;
+    return (E) array[index];
   }
 
   @Override
@@ -85,23 +83,24 @@ public class OurArrayList<E> implements OurList<E> {
   }
 
   public E remove(int index) {
-    if (index >= size || index < 0)
+    if (index < 0 || index >= size) {
+      System.err.println("Некорректный индекс для удаления: " + index);
       return null;
-
-    E result = (E) array[index];
-    for (int i = index + 1; i < size; i++) {
-      array[i - 1] = array[i];
     }
+
+    E result = array[index];
+    System.arraycopy(array, index + 1, array, index, size - index - 1);
     array[size - 1] = null;
     size--;
 
     return result;
   }
 
+
   @Override
   public boolean remove(E value) {
-    for( int i = 0; i < array.length; i++){
-      if(array[i].equals(value)){
+    for (int i = 0; i < size; i++) {
+      if (Objects.equals(array[i], value)) {
         remove(i);
         return true;
       }

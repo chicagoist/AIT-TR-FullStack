@@ -13,12 +13,14 @@ public class Main {
     System.out.printf("Expected = %d, Actual = %d\n", 2, list.get(1));
     System.out.printf("Expected = %d, Actual = %d\n", 3, list.get(2));
 
+
     System.out.println("\nlist.set(4, 1):");
     list.set(4, 1);
     System.out.printf("Expected = %d, Actual = %d\n", 3, list.size());
     System.out.printf("Expected = %d, Actual = %d\n", 1, list.get(0));
     System.out.printf("Expected = %d, Actual = %d\n", 4, list.get(1));
     System.out.printf("Expected = %d, Actual = %d\n", 3, list.get(2));
+
 
     System.out.println("\nlist.add():");
     list.add(0, 1);
