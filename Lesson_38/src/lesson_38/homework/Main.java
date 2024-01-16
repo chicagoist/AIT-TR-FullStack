@@ -50,11 +50,6 @@ public class Main {
 
     returnList = checker.compareTwoLists(linkedListString1, linkedListString2);
     System.out.println(returnList.toString());
-
-    // TESTS
-    CheckLinkedListTest test = new CheckLinkedListTest();
-    test.testCompareTwoListsString();
-
   }
 }
 /* OUTPUT
