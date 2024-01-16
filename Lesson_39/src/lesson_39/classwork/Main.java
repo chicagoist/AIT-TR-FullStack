@@ -8,6 +8,12 @@ public class Main {
         System.out.println(order1 == order2);
         System.out.println(order1.equals(order2));
 
+        System.out.println(order1.toString());
+        System.out.println(order2.toString());
+
+
+
+
         // Нужно переjghtltkznm метод equals
 
         System.out.println("order1.hashCode() = " + order1.hashCode());
