@@ -1,6 +1,7 @@
 package lesson_38.homework;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,6 +17,8 @@ import java.util.List;
 public class Main {
   public static void main(String[] args) {
     LinkedList<Integer> linkedList1 = new LinkedList<>();
+    LinkedList<Integer> linkedListEmpty1 = new LinkedList<>();
+    LinkedList<Integer> linkedListEmpty2 = new LinkedList<>();
     List<Integer> linkedList2 = new ArrayList<>();
 
     LinkedList<String> linkedListString1 = new LinkedList<>();
@@ -49,6 +52,9 @@ public class Main {
     System.out.println(returnList.toString());
 
     returnList = checker.compareTwoLists(linkedListString1, linkedListString2);
+    System.out.println(returnList.toString());
+
+    returnList = checker.compareTwoLists(linkedListEmpty1, linkedListEmpty2);
     System.out.println(returnList.toString());
   }
 }
