@@ -34,6 +34,19 @@ public class Main {
     stringMap.clear();
 
     System.out.println(mapProcessor.keysFinder(stringMap));
+
+    stringMap.clear();
+    stringMap.put("g", "Hi");
+    stringMap.put("c", "World");
+
+    System.out.println(mapProcessor.keysFinder(stringMap));
+
+    stringMap.clear();
+    stringMap.put("b", "Hi");
+    stringMap.put("a", "World");
+
+    System.out.println(mapProcessor.keysFinder(stringMap));
+
   }
 }
 /* OUTPUT
