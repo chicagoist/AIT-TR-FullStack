@@ -54,6 +54,8 @@ public class Main {
 {a=Hi, ab=HiThere, b=There}
 {a=Hi, c=World}
 {}
+{c=World, g=Hi}
+{a=World, ab=WorldHi, b=Hi}
 
 Process finished with exit code 0
 
