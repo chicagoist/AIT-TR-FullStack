@@ -60,11 +60,13 @@ public class Main {
 
     private static List<String> getAnagram(ArrayList<String> list, String _name) {
         Map<String, Integer> ourMap = new HashMap<>();
+        List<String> resultList = new ArrayList<>();
         //List<Map<String, Integer>> resultList = new ArrayList<>(); //
+        // int index = 0; // v1.0
         // version 1.0
 
-        List<String> resultList = new ArrayList<>(); // version 2.0
-        // int index = 0; // v1.0
+
+
         char[] targetArray = _name.toCharArray(); // v2.0
         Arrays.sort(targetArray); // v2.0
 
