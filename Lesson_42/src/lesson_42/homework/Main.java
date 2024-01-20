@@ -58,33 +58,54 @@ public class Main {
   (все буквы в словах маленькие)
    */
 
-    private static List<Map<String, Integer>> getAnagram(ArrayList<String> list, String _name) {
+    private static List<String> getAnagram(ArrayList<String> list, String _name) {
         Map<String, Integer> ourMap = new HashMap<>();
-        List<Map<String, Integer>> resultList = new ArrayList<>();
-        //List<String> resultList = new ArrayList<>();
-        int index = 0;
+        //List<Map<String, Integer>> resultList = new ArrayList<>(); //
+        // version 1.0
+
+        List<String> resultList = new ArrayList<>(); // version 2.0
+        // int index = 0; // v1.0
+        char[] targetArray = _name.toCharArray(); // v2.0
+        Arrays.sort(targetArray); // v2.0
 
         for(String str : list) {
 
             if(str.length() == _name.length()) {
-                char[] inArray = str.toCharArray();
+                // V1.0
+
+/*              char[] inArray = str.toCharArray();
                 char[] secArray = _name.toCharArray();
 
                 Arrays.sort(inArray);
                 Arrays.sort(secArray);
 
-                if(Arrays.equals(inArray, secArray)) {
+               if(Arrays.equals(inArray, secArray)) { // v1.0
                     ourMap.put(str, index);
                     index++;
                 } else {
                     ourMap.remove(str);
+                }*/
+
+                // V2.0
+                char[] currentArray = str.toCharArray(); // v2.0
+                Arrays.sort(currentArray); // v2.0
+                if(Arrays.equals(targetArray, currentArray)) {
+                    resultList.add(str);
+
                 }
+
             }
         }
-
-
-        resultList.add(ourMap);
-        return resultList;
+            //resultList.add(ourMap); // v1.0
+            return resultList;
+        }
     }
-}
 
+/* OUTPUT
+NullPointerException : null
+ArithmeticException = / by zero
+ArrayIndexOutOfBoundsException = Index 8 out of bounds for length 2
+[john, ojnh, njoh]
+
+Process finished with exit code 0
+ */
