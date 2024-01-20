@@ -61,53 +61,33 @@ public class Main {
     private static List<String> getAnagram(ArrayList<String> list, String _name) {
         Map<String, Integer> ourMap = new HashMap<>();
         List<String> resultList = new ArrayList<>();
-        //List<Map<String, Integer>> resultList = new ArrayList<>(); //
-        // int index = 0; // v1.0
-        // version 1.0
-
-
-
-        char[] targetArray = _name.toCharArray(); // v2.0
-        Arrays.sort(targetArray); // v2.0
+        int index = 1;
 
         for(String str : list) {
 
             if(str.length() == _name.length()) {
-                // V1.0
-
-/*              char[] inArray = str.toCharArray();
+                char[] inArray = str.toCharArray();
                 char[] secArray = _name.toCharArray();
 
                 Arrays.sort(inArray);
                 Arrays.sort(secArray);
 
-               if(Arrays.equals(inArray, secArray)) { // v1.0
+                if(Arrays.equals(inArray, secArray)) {
                     ourMap.put(str, index);
                     index++;
-                } else {
-                    ourMap.remove(str);
-                }*/
-
-                // V2.0
-                char[] currentArray = str.toCharArray(); // v2.0
-                Arrays.sort(currentArray); // v2.0
-                if(Arrays.equals(targetArray, currentArray)) {
-                    resultList.add(str);
-
                 }
-
             }
         }
-            //resultList.add(ourMap); // v1.0
-            return resultList;
-        }
+        resultList.addAll(ourMap.keySet());
+        return resultList;
     }
-
+}
 /* OUTPUT
 NullPointerException : null
 ArithmeticException = / by zero
 ArrayIndexOutOfBoundsException = Index 8 out of bounds for length 2
-[john, ojnh, njoh]
+[ojnh, njoh, john]
 
 Process finished with exit code 0
  */
+
