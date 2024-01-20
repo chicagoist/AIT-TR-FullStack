@@ -16,20 +16,75 @@ package lesson_42.homework;
 
 */
 
+import java.util.*;
+
 public class Main {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    try {
-      String s = null;
-      String m = s.toLowerCase();
+        try {
+            String s = null;
+            String m = s.toLowerCase();
 
-      int a = 40 / 0;
+        } catch(NullPointerException n) {
+            System.out.println("NullPointerException : " + n.getMessage());
+        }
 
+        try {
+            int a = 40 / 0;
+        } catch(ArithmeticException a) {
+            System.out.println("ArithmeticException = " + a.getMessage());
+        }
 
-    } catch (ArithmeticException e) {
-      System.out.println(e.getMessage());
-    } catch(NullPointerException n) {
-      System.out.println(n.getMessage());
+        try {
+            int[] m = new int[2];
+            m[8] = 5;
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException = " + e.getMessage());
+        }
+        ArrayList<String> stringArrayList =
+                new ArrayList<>(Arrays.asList("john", "mary", "ojnh", "bill",
+                        "njoh", "amry"));
+
+        System.out.println(getAnagram(stringArrayList, "john"));
     }
-  }
+
+  /*
+  Задача2* (не обязательно)
+
+  Написать метод, который принимает список имен и их анаграмм и имя, по которому
+  он возвращает список всех его анаграмм, включая само имя. При решении
+  использовать мапу.
+  Пример: [john, mary, ,jonh, bill, njoh, amry], john -> [ojhn,jonh,njoh]
+  (все буквы в словах маленькие)
+   */
+
+    private static List<Map<String, Integer>> getAnagram(ArrayList<String> list, String _name) {
+        Map<String, Integer> ourMap = new HashMap<>();
+        List<Map<String, Integer>> resultList = new ArrayList<>();
+        //List<String> resultList = new ArrayList<>();
+        int index = 0;
+
+        for(String str : list) {
+
+            if(str.length() == _name.length()) {
+                char[] inArray = str.toCharArray();
+                char[] secArray = _name.toCharArray();
+
+                Arrays.sort(inArray);
+                Arrays.sort(secArray);
+
+                if(Arrays.equals(inArray, secArray)) {
+                    ourMap.put(str, index);
+                    index++;
+                } else {
+                    ourMap.remove(str);
+                }
+            }
+        }
+
+
+        resultList.add(ourMap);
+        return resultList;
+    }
 }
+
