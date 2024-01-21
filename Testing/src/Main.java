@@ -5,6 +5,7 @@ public class Main {
         System.out.println(super1.toString());*/
 
         Middler middler = new Middler();
+        System.out.println(middler.toString());
 
     }
 }

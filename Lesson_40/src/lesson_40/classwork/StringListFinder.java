@@ -1,4 +1,4 @@
-package lesson_49.classwork;
+package lesson_40.classwork;
 
 import java.util.Iterator;
 import java.util.List;

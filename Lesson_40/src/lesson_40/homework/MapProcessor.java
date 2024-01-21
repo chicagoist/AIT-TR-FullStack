@@ -1,4 +1,4 @@
-package lesson_49.homework;
+package lesson_40.homework;
 
 import java.util.Map;
 

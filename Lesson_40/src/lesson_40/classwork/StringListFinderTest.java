@@ -1,10 +1,9 @@
-package lesson_49.classwork;
+package lesson_40.classwork;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -32,8 +31,6 @@ public class StringListFinderTest {
         List<String> stringList = Collections.emptyList();
 
         // Act and Assert
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            StringListFinder.findFirstString(stringList);
-        });
+        Assertions.assertThrows(IllegalArgumentException.class, () -> StringListFinder.findFirstString(stringList));
     }
 }
