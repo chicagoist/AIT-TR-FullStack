@@ -47,7 +47,7 @@ CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
-Testing
+#!Testing
 Makefile
 cmake_install.cmake
 install_manifest.txt
@@ -140,7 +140,7 @@ cmake-build-*/
 out/
 
 # mpeltonen/sbt-idea plugin
-!.idea_modules/
+#.idea_modules/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
