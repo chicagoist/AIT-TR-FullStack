@@ -246,7 +246,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Personn{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
@@ -272,7 +272,7 @@ public class Task {
     John, 90
     Нужно написать метод, читающий этот файл и возвращающий лист людей старше 18 лет, отсортированный
     по возрасту. Известно, что файл не пустой
-    List<Person>
+    List<Personn>
 
      */
     public static void main(String[] args) {

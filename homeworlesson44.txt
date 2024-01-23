@@ -1,0 +1,15 @@
+
+name = Peter, age = 37
+name = John, age = 90
+name = Peter, age = 37
+name = John, age = 90
+name = Peter, age = 37java.text.SimpleDateFormat@b93b42a0
+name = John, age = 90java.text.SimpleDateFormat@b93b42a0
+name = Peter, age = 3701/23/2024 22:24:52
+name = John, age = 9001/23/2024 22:24:52
+name = Peter, age = 37 : 01/23/2024 22:25:53
+name = John, age = 90 : 01/23/2024 22:25:53
+name = Peter, age = 37 : 01/23/2024 22:27:00
+name = John, age = 90 : 01/23/2024 22:27:00
+name = Peter, age = 37 {01/23/2024 22:27:49}
+name = John, age = 90 {01/23/2024 22:27:49}
