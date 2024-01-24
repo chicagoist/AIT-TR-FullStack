@@ -6,7 +6,6 @@ import java.util.function.Predicate;
 
 public class Practice {
 
-
     public static String transformer(String input,
                                      Predicate<String> predicate,
                                      Function<String, String> function) {
