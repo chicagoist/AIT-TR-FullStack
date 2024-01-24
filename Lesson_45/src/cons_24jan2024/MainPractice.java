@@ -1,7 +1,8 @@
 package cons_24jan2024;
 
 /*import java.util.function.Function;
-import java.util.function.Predicate;*/
+import java.util.function.Predicate;
+*/
 
 public class MainPractice {
 
