@@ -9,6 +9,7 @@ public class Solution {
         List<String> listOfNames = Arrays.asList("John", null, "Max", "Maria",
                 "Ivan", "Maria", "Sergey", "Max", "John");
         System.out.println("---Task 1---");
+
         Unique.getUniqueElements(listOfNames);
 
         // Task 2
@@ -25,10 +26,23 @@ public class Solution {
         List<Person> listOfPersons = Arrays.asList(maleBorisJohnson,
                 femaleKatyParry, maleDieterBohlen, maleThomasAnders);
         System.out.println("---Task 2---");
+
         OneWhoIsUnder17YearsOld.finderYounger(listOfPersons);
     }
 }
 /* OUTPUT
+---Task 1---
+John
+null
+Max
+Maria
+Ivan
+Sergey
+---Task 2---
+Bohlen
+Anders
+
+Process finished with exit code 0
 
 
  */
