@@ -44,6 +44,8 @@ our_interfaces (см.код) с использованием стандартн�
         //  System.out.println(transformable1.modify("ab"));
         //  System.out.println(transformable1.modify("abcd"));
         UnaryOperator<String> transformable1 = s -> s.length() == 4 ? "****" : s;
+        Function<String,String> transformableF =
+                s -> s.length() == 4 ? "****" : s; // можно и так
         System.out.println(transformable1.apply("ab"));
         System.out.println(transformable1.apply("abcd"));
 
