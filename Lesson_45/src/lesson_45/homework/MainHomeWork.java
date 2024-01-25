@@ -54,6 +54,7 @@ our_interfaces (см.код) с использованием стандартн�
         Consumer<String> printable = s -> System.out.println("!" + s + "!");
         printable.accept("Hello");
 
+
         // Producable producable = () -> "Hello World";
         // System.out.println(producable.produce());
         Supplier<String> producable = () -> "Hello World";
