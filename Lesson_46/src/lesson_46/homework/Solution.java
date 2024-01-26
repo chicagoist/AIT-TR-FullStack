@@ -23,7 +23,10 @@ public class Solution {
         Person maleDieterBohlen = new Person("Bohlen", 16, addressMaintal);
         Person maleThomasAnders = new Person("Anders", 15, addressHanau);
 
-        List<Person> listOfPersons = Arrays.asList(maleBorisJohnson,
+/*        List<Person> listOfPersons = Arrays.asList(maleBorisJohnson,
+                femaleKatyParry, maleDieterBohlen, maleThomasAnders);  */
+
+        List<Person> listOfPersons = List.of(maleBorisJohnson,
                 femaleKatyParry, maleDieterBohlen, maleThomasAnders);
         System.out.println("---Task 2---");
 
