@@ -2,7 +2,6 @@
 
     Discussing homework
     Stream API
-    Class Optional
 
 #### Streams (Stream) in Java
 
@@ -333,192 +332,140 @@ IntStream.of(50, 60, 70, 80, 90, 100, 110, 120).filter(x -> x < 90).map(x -> x +
 .forEach(System.out::print);
 ```
 
-
-
-```code/main46/src/MergeMethodDemo.java```
 ```java
-import java.util.HashMap;
-import java.util.Map;
+public class Address {
+private String street;
+private int houseNumber;
 
-public class MergeMethodDemo {
+    public Address(String street, int houseNumber) {
+        this.street = street;
+        this.houseNumber = houseNumber;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public int getHouseNumber() {
+        return houseNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", houseNumber=" + houseNumber +
+                '}';
+    }
+}
+```
+
+`code/homework47/src/Homework.java`
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toSet;
+
+public class Homework {
+//Написать метод, принимающий лист имен, в котором некоторые имена повторяются
+// и печатающий имена из листа без печати повторений.
+// При решении использовать Stream API
+public static void main(String[] args) {
+List<String> list = List.of("John","John","Jack","Jack");
+withoutDuplicates(list);
+
+        Address address1 = new Address("Street1",1);
+        Address address2 = new Address("Street2",2);
+        Address address3 = new Address("Street3",3);
+        Address address4 = new Address("Street4",4);
+
+        Person person1 = new Person("Person1",16,address1);
+        Person person2 = new Person("Person2",26,address2);
+        Person person3 = new Person("Person3",10,address3);
+        Person person4 = new Person("Person4",116,address4);
+
+        List<Person>persons = List.of(person1,person2,person3,person4);
+        addressesPersonsMore17(persons);
+    }
+
+    public static void withoutDuplicates(List<String> names){
+        names.stream().distinct().forEach(System.out :: println);
+    }
+
+    public static List<String> withoutDuplicatesList(List<String> names){
+        return names.stream().distinct().collect(Collectors.toList());
+    }
+
+    public static List<String> withoutDuplicatesSet(List<String> names){
+        return names.stream().collect(
+                Collectors.collectingAndThen(toSet(), ArrayList ::new));
+    }
+
+
 
     /*
-     метод merge()
-
-     Map hashMap = new HashMap()
-     hashMap.merge(key,value, remappingFunction)
-
-     параметры:
-     key -  ключ, по которому нужно положить значение value
-     value - значение связанное с ключом key
-     remapping function - используется в случае, если ключ key уже существует
-
-     Метод просто добавляет значение value  по ключу key   если такого ключа в мапе нет.
-     Если есть, то с помощью remapping function определяется каким будет новое значение value
+    Есть класс Address с полями String street и int houseNumber и
+    класс Person с полями String name, int age, Address address.
+    Используя Stream API написать метод, принимающий лист Person и печатающий адреса тех, кто старше 17 лет
      */
-    public static void main(String[] args) {
-        Map<String,Integer> items = new HashMap<>();
 
-        items.put("Desktop",1000);
-        items.put("TVset",600);
-        items.put("Mouse",30);
+    public static void addressesPersonsMore17( List<Person> personList){
+        personList.stream()
+                .filter(p -> p.getAge() > 17)
+                .map(Person::getAddress)
+                .forEach(System.out :: println);
 
-        System.out.println(items);
-
-        items.merge("Phone",250,(oldValue,newValue)->oldValue + newValue);
-
-        System.out.println(items);
-
-        items.merge("Desktop",500, Integer::sum);
-        System.out.println(items);
-
-
-        Map<String,String> cities = new HashMap<>();
-        cities.put("Berlin","Germany");
-        cities.put("Paris","France");
-        cities.put("London","England");
-
-        System.out.println("Countries:");
-        System.out.println(cities);
-
-        cities.merge("London","GreatBritain",(oldValue,newValue)-> oldValue +"/" + newValue);
-        cities.merge("Madrid","Spain",(oldValue,newValue)-> oldValue +"/" + newValue);
-
-        System.out.println("Countries changed");
-        System.out.println(cities);
-
-        System.out.println("With forEach");
-        cities.forEach((key,value) -> System.out.println("key: " + key +" value:" + value));
-
-
-        Map<String,Integer> items1 = new HashMap<>();
-        items1.put("Desktop",600);
-        items1.put("Mouse",150);
-
-        Map<String, Integer> items2 = new HashMap<>();
-        items2.put("TVset",800);
-        items2.put("Mouse",100);
-
-        items2.forEach((key,value)-> items1.merge(key,value,(oldValue,newValue)->{
-
-            if(oldValue < newValue)
-                return oldValue;
-            else
-                return newValue;
-        }));
-
-        System.out.println("merged map");
-        items1.forEach((key,value) -> System.out.println("key: " + key +" value:" + value));
     }
-}
-```
- 
-```code/our__interfaces/src/Checkable.java```
-```java
-public interface Checkable {
-boolean check( String string);
-}
 
-code/our__interfaces/src/Concatable.java
-
-public interface Concatable {
-String  concat( int a, int b);
-}
-
-code/our__interfaces/src/Main.java
-
-import java.util.function.*;
-
-public class Main {
-/*
-Создать следующие интерфейсы:
-Printable, содержащий метод void print(String s)
-Producable, содержащий метод String produce()
-Используя эти интерфейсы написать 2 лямбды, реализующие метод соответствующего интерфейса таким образом:
-
-строка распечатывается в виде !строка!
-возвращается строка "Hello World"
-*/
-public static void main(String[] args) {
-
-        //  используя наши интерфейсы написать такие лямбды:
-        // 1. конкатинировать  a и b   и получить ab
-        // 2.  если длина строки 3 вернуть true
-        // 3.  если длина строки четная вернуть true  иначе false
-        // 4. вернуть строку в верхнем регистре
-        // 5. если длина строки 4 вернуть 4 звездочки иначе вернуть строку без изменений
-
-        Concatable concatable = (a,b) -> Integer.toString(a) + b;
-        System.out.println(concatable.concat(1,3));
-
-        BiFunction<Integer,Integer,String> biFunction = (a,b) -> Integer.toString(a) + b;
-        System.out.println(biFunction.apply(1,3));
-
-        Checkable checkable = s -> s.length() == 3;
-        System.out.println(checkable.check("abc"));
-        System.out.println(checkable.check("abcd"));
-
-        Predicate<String> predicate = s -> s.length() == 3;
-        predicate.test("abc");
-
-        System.out.println("checkable even");
-        checkable = s -> s.length() % 2 == 0;
-        System.out.println(checkable.check("abc"));
-        System.out.println(checkable.check("abcd"));
-        predicate = s -> s.length() % 2 == 0;
-
-
-        Transformable transformable = String::toUpperCase;
-        System.out.println(transformable.modify("abcDe"));
-        Function<String,String> function = String::toUpperCase;
-
-
-        Transformable transformable1 = s -> s.length() == 4 ? "****":s;
-        System.out.println(transformable1.modify("ab"));
-        System.out.println(transformable1.modify("abcd"));
-        UnaryOperator<String> unaryOperator = s -> s.length() == 4 ? "****":s;
-
-        Printable printable = s -> System.out.println("!" + s + "!");
-        printable.print("Hello");
-        Consumer<String> consumer = s -> System.out.println("!" + s + "!");
-        consumer.accept("abc");
-
-        Producable producable = () -> "Hello World";
-        System.out.println(producable.produce());
-        Supplier<String> supplier = () -> "Hello World";
-        System.out.println(supplier.get());
+    public static List<Address> addressesPersonsMore17List( List<Person> personList){
+        return  personList.stream()
+                .filter(p -> p.getAge() > 17)
+                .map(Person::getAddress)
+               // .forEach(System.out :: println);
+                .collect(Collectors.toList());
 
     }
 }
 ```
 
-```code/our__interfaces/src/Printable.java```
+`code/homework47/src/Person.java`
+
 ```java
-public interface Printable {
-void print(String s);
+public class Person {
+private String name;
+private int age;
+private Address address;
+
+
+    public Person(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
 }
 ```
 
-```code/our__interfaces/src/Producable.java```
-```java
-public interface Producable {
-String produce();
-}
-```
+`code/our_stream/src/Car.java`
 
-```code/our__interfaces/src/Transformable.java```
-```java
-public interface Transformable {
-String modify( String string);
-}
-```
-
-```code/stream_api/src/Car.java```
 ```java
 public class Car {
-
-    private String brand;
-    private int price;
+private String brand;
+private int price;
 
     public Car(String brand, int price) {
         this.brand = brand;
@@ -535,195 +482,200 @@ public class Car {
 }
 ```
 
-```code/stream_api/src/Main.java```
+`code/our_stream/src/Main.java`
+
 ```java
 import java.util.*;
-import java.util.stream.IntStream;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
 public static void main(String[] args) {
+//flatMap
+String[] strings = {"Hello","Java"};
 
-        int[] ints = {10,20,30,40,50,60,70,80};
-        int counter = 0;
-
-        for( int i : ints){
-            if( i < 31)
-                continue;
-            i = i * 2;
-            counter++;
-            if(counter > 4)
-                break;
-            System.out.println(i);
-        }
-
-        System.out.println("with stream");
-
-        IntStream.of(10,20,30,40,50,60,70,80)
-                .filter(i -> i >= 31)
-                .map(i -> i*2)
-                .limit(4)
+        Arrays.stream(strings)
+                .map(str -> str.split(""))
+                .map(Arrays :: stream)
                 .forEach(System.out :: println);
 
+
+        Arrays.stream(strings)
+                .map(str -> str.split(""))
+                .flatMap(Arrays :: stream)
+                .forEach(System.out :: print);
+
+        // терминальные операторы
         /*
-        Stream API - это поток данных.
-        Операторы в стримах бывают :
-        промежуточные - после обработки данных они вернут стрим. Промежуточных операторов может быть несколько
+        count() -  возвращает кол-во элементов в потоке
 
-        терминальные - после обработки элементов  завершают работу стрима. Терминальный  оператор может быть только один
-        Обработка данных не начнется пока не будет вызван терминальный оператор
-
-        Создание стримов:
-
+        findFirst()/findAny() -  извлекает первый эл-т / случайный элт ( часто тоже первый)
 
          */
-        Stream<String> empty = Stream.empty(); // пустой стрим
+        System.out.println();
+        List<String> list = Arrays.asList("one","two","three","four");
 
-        Collection<String> collection = Arrays.asList("John","Jack","Bill"); // стрим коллекции
-        collection.stream();
+      Optional<String> first = list.stream().findFirst();
+        System.out.println(first.get());
 
-        String[] arr = {"John","Jack","Bill"};
-        Arrays.stream(arr); // стрим массива
+        Optional<String> any = list.stream().findAny();
+        System.out.println(any.get());
 
-        "abcd".chars(); //  стрим строки
-         String one = "one";
-        Stream.of(one,"two"); //  с помощью статического метода of
+        // allMatch, anyMatch, noneMatch
 
-        //  стримы примитивов
-        IntStream intStream = IntStream.of(1,2,3);
-        IntStream.range(1,3); // стрим целых чисел  в диапазоне от 1 до 3, 3 не включая
-        IntStream.rangeClosed(1,3); // стрим целых чисел  в диапазоне от 1 до 3, 3  включая
+        /*
+        allMatch(predicate) - true , если все элементы стрима удовлетворяют условию предикаты
+        anyMatch(predicate) - true , если хотя бы один элемент стрима удовлетворяет условию предикаты
+        noneMatch(predicate) - true , если ни один элемент стрима не удовлетворяет условию предикаты
+         */
+        List<String> names = Arrays.asList("Jack","John","Ann","Vladislav");
 
-        // стрим примитивов с помощью класса Random
-        Random random = new Random();
-        random.doubles();
+        boolean allElements = names.stream().allMatch(s -> s.length() > 2);
+        System.out.println(allElements);
 
-        // метод ForEach  -перебор элементов, терминальный оператор
-        Stream<String> names = Stream.of("Jack","John","Ann","Kate");
-        names.forEach(System.out :: println);
+        boolean anyElement = names.stream().anyMatch(s -> s.length() > 7);
+        System.out.println(anyElement);
 
-        // промежуточные операторы
-         /*
-         filter() -  принимает условие( предикату)  и возвращает поток из элементов, удовлетворяющих этому условию
+        boolean noneElement = names.stream().noneMatch(s -> s.equals("Tim"));
+        noneElement = names.stream().noneMatch(s -> s.equals("Ann"));
+        System.out.println(noneElement);
 
-          */
-        System.out.println("after filter");
-        names = Stream.of("Jack","John","Ann","Kate");
-        names.filter(n ->n.length() == 4).forEach(System.out::println);
+        // min()  и max() -  возвращают мин и макс значение
+        // Optional<T> min ( T comparator)
 
-        Stream<Car> carStream = Stream.of( new Car("Ford",50000),
-                                                  new Car("Mercedes",100000),
-                                                  new Car ("Bentley",500000));
+        List<Integer> ints = Arrays.asList(3,4,1,34,68,19);
 
-        carStream.filter(car -> car.getPrice() < 150000)
-                 .forEach(car -> System.out.println(car.getBrand()));
+       Optional<Integer> minElt =  ints.stream().min(Integer:: compare);
+        System.out.println(minElt.get());
 
+        Optional<Integer> maxElt =  ints.stream().max(Integer:: compare);
+        System.out.println(maxElt.get());
 
-        // map() - маппинг, отображение - преобразует элементы потока map(Function mapper)
+        // reduce()
 
-        carStream = Stream.of( new Car("Ford",50000),
-                new Car("Mercedes",100000),
-                new Car ("Bentley",500000));
+      Optional<Integer> res =  Stream.of(1,2,3,4,5).reduce((a,b)-> a * b);
+        System.out.println(res.get());
+        // e1*e2*e3*e4*e5
 
-        carStream.filter(car -> car.getPrice() < 150000)
-                .map(Car::getBrand)
-                .forEach(System.out :: println);
+      Optional<String> stringResult = Stream.of("Hello","Java","!!")
+              .reduce((str1,str2)-> str1 +" " +str2);
+        System.out.println(stringResult.get());
 
-        carStream = Stream.of( new Car("Ford",50000),
-                new Car("Mercedes",100000),
-                new Car ("Bentley",500000));
+      int result = Stream.of(1,2,3,4,5).reduce(2,(a,b)->a * b);
+        System.out.println(result);
 
-        carStream.map(car ->"brand: " + car.getBrand() + "price: " + car.getPrice())
-                 .forEach(System.out::println);
-
-        // sorted() - сортировка
-        System.out.println("sorting");
+        //метод collect(collector)
+        // Collector<T,A,R> collector
+        /*
+         несколько методов класса Collectors:
+        toList()
+        toSet()
+        toMap()
+         */
 
         List<String> cars = new ArrayList<>();
+        cars.add("Volvo");
         cars.add("Mercedes");
-        cars.add("Volvo");
-        cars.add("Volvo");
-        cars.add("Bentley");
-        cars.add("Bentley");
+        cars.add("BMW");
         cars.add("Opel");
-        cars.add("Opel");
+        cars.add("Ford");
+        cars.add("Ford");
 
-        cars.stream()
-                .filter(car -> car.length() > 4)
-                .sorted()
-                .forEach(System.out::println);
+        List<String> carsFiltered =cars.stream()
+                .filter(car -> car.length() > 3)
+                .collect(Collectors.toList());
+
+        System.out.println(carsFiltered);
 
 
-        System.out.println();
-        // distinct() -  возвращает уникальные элементы
-         cars.stream().distinct().forEach(System.out::println);
+        Set<String> carsSet =cars.stream()
+                .filter(car -> car.length() > 3)
+                .collect(Collectors.toSet());
 
-         // skip(long n) -  пропускает первые n  элементов
-        // limit( long n) - возвращает поток в котором не более n первых элементов
-        System.out.println("skip and limit");
-        List<String> stringList = Arrays.asList("one","two","three","four","five");
-        stringList.stream()
-                .skip(2)
-                .limit(2)
-                .forEach(System.out::println);
+        System.out.println(carsSet);
 
-        // Терминальные операторы . Операции, возвращающие результат
+        Car car1 = new Car("BMW",150000);
+        Car car2 = new Car("Mercedes",200000);
+        Car car3 = new Car("Opel",40000);
 
-        //count() - возвращает количество элементов в потоке
-        System.out.println(
-                stringList.stream()
-                .filter(s -> s.length()>3)
-                .count()
-        );
+        List<Car> carList = Arrays.asList(car1,car2,car3);
+
+        Map<String,Integer> carMap = carList.stream()
+                .collect(Collectors.toMap(Car::getBrand,Car::getPrice));
+
+        System.out.println(carMap);
+        carMap.forEach((key,value) -> System.out.println("key: " + key + " ,value:" + value));
+
+        ArrayList<Car> resultCars = carList.stream().collect(Collectors.toCollection(ArrayList :: new));
+
+        System.out.println("grouping by");
+        List<String> namesList = Arrays.asList("John","Bill","Tim","Jack","Peter","Benji");
+        System.out.println(namesByLength(namesList));
+
+        System.out.println("\npartitioning by");
+        System.out.println(partitioningList(namesList));
+
+        System.out.println("\njoining");
+        System.out.println(convertToString(namesList));
     }
-}
-```
+    // groupingBy collector -  используется для группировки обьектов по заданному признаку и сохранения
+    // результата в мапе :
+    // Написать метод, группирующий элементы листа строк по длине строки и сохраняющий рез-т в сетах. Метод вернет
+    // мапу
 
-```code/stream_api/src/OurOptional.java```
-```java
-import java.util.Optional;
+    public static Map<Integer,Set<String>> namesByLength( List<String>list){
+        return list.stream()
+                .collect(Collectors.groupingBy(String :: length, Collectors.toSet()));
+    }
 
-public class OurOptional {
-/*
-Класс  Optional  - предоставляет доп. возможности для обработки null
-
+    /*
+    partitioningBy - особый случай groupingBy , принимающий предикату и собирающий стрим в мапу, у которой
+    ключами будут true false, а в качестве значений  - коллекции элементов.
+    Ключ true -  элементы, удовлетворяющие условию
+    false -  не удовл.
+    Пример: написать метод, разделяющий элементы листа стрингов по длине строки  > 4  и возвращающий мапу
+    с ключами true false и листами соответствующих элементов
 
      */
-    public static void main(String[] args) {
-        Optional<String> empty = Optional.empty();
-        System.out.println(empty.isPresent());
-
-        // создание не пустого  обьекта
-        String name = "John";
-        Optional<String> optJohn = Optional.of(name);
-        System.out.println(optJohn.isPresent());
-
-        optJohn.ifPresent(str -> System.out.println(str.length()));
-
-        // методы получения значения
-        String nullName = null;
-      //  nullName = "Jack";
-
-        // orElse
-        String kate = Optional.ofNullable(nullName).orElse("Kate");
-        System.out.println(kate);
-        // orElseGet
-        String anotherName = Optional.ofNullable(nullName).orElseGet(()->"Kate");
-
-        // get
-        Optional<String> word = Optional.of("Java");
-        String hello = word.get();
-
-
+    public static Map<Boolean,List<String>> partitioningList( List<String>strings){
+        return strings.stream()
+                .collect(Collectors.partitioningBy(s -> s.length() > 4));
     }
+
+    /*
+    joining()
+    обьединить имена из листа в строку такого вида Students: name1,name2,name3 study Java
+
+     */
+    public static String convertToString( List<String>strings){
+        return strings
+                .stream()
+                .collect(Collectors.joining(", ","Students: "," study Java"));
+    }
+
 }
 ```
-####HOME WORK
 
-**Задача 1**
+`code/our_stream/src/Practice.java`
 
-Написать метод, принимающий лист имен, в котором некоторые имена повторяются и печатающий имена из листа без печати повторений. При решении использовать Stream API
+```java
+public class Practice {
 
-**Задача 2**
+    /*
+    написать метод, проверяющий является ли строка числом
+    "123456" -> true
+    "ab123" -> false
+    Character.isDigit()  allMatch()
+     */
+    public static void main(String[] args) {
+        System.out.println(isStringDigit("123457"));
+        System.out.println(isStringDigit("a123457"));
+    }
 
-Есть класс Address с полями String street и int houseNumber и класс Person с полями String name, int age, Address address. Используя Stream API написать метод, принимающий лист Person и печатающий адреса тех, кто старше 17 лет
+    public static boolean isStringDigit(String str){
+        return str.chars().allMatch(Character :: isDigit);
+    }
+
+
+}
+```
