@@ -8,9 +8,10 @@ public class Task2 {
     protected static int sum = 0;
 
     protected static int summationOfAges(List<Person> list) {
-        return list.stream()
+        return list
+                .stream()
+                .filter(age -> age.getAge() > 18)
                 .map(Person::getAge)
-                .filter(age -> age > 18)
                 .reduce(sum, Integer::sum);
     }
 
