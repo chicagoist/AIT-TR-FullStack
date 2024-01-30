@@ -18,6 +18,8 @@
     Слой "сервисов" (Service) - отвечает за бизнес-логику приложения
     Слой "репозиториев" (Repository) - отвечает за взаимодействие с хранилищем данных
 
+![](./TreeTierArchitecturePic.png)
+
 The Controller-Service-Repository pattern is prevalent in a lot of applications especially Spring Boot applications. One of the big reasons is that it does a great job of a separation of concerns: The Controller layer, at the top of this picture, is solely responsible for exposing the functionality so that it can be consumed by external entities (including, perhaps, a UI component). The Repository layer, at the bottom of this picture, is responsible for storing and retrieving some set of data. The Service layer is where all the business logic should go. If the business logic requires fetching/saving data, it wires in a Repository. If someone wants to access this business logic, they go through a Controller to get there. If code is related to storage/retrieval, it should go in the Repository. If its dealing with exposing functionality, it goes in the Controller. Anything unique in the business logic would go in the Service layer. The Repository doesn’t care which component is invoking it; it blindly does what it is asked. The Service layer doesn’t care how it gets accessed, it just does its work, using a Repository where required. And the Controller is just passing the work down to the Service layer, so it can stay nice and lean. It’s a pretty simple separation of concerns.
 
 We create an additional, separate layer model or entity (models of the business area, entities that will be saved in the repository) ё
