@@ -1,6 +1,7 @@
-package services;
+package ait.services;
 
-import lesson_49.classwork.model.User;
+
+import ait.model.*;
 
 import java.util.List;
 

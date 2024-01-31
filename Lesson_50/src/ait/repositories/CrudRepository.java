@@ -1,4 +1,4 @@
-package repositories;
+package ait.repositories;
 
 import java.util.List;
 

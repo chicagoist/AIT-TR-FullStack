@@ -1,6 +1,6 @@
-package controllers;
+package ait.controllers;
 
-import lesson_49.classwork.model.User;
+import ait.model.User;
 
 import java.util.List;
 

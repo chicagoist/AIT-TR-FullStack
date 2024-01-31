@@ -1,6 +1,6 @@
-package repositories;
+package ait.repositories;
 
-import lesson_49.classwork.model.User;
+import ait.model.*;
 
 public interface UserRepository extends CrudRepository<User> {
     public User findByEmail(String email);

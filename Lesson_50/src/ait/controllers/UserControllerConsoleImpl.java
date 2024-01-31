@@ -1,7 +1,8 @@
-package controllers;
+package ait.controllers;
 
-import lesson_49.classwork.model.User;
-import lesson_49.classwork.services.UserService;
+
+import ait.model.User;
+import ait.services.UserService;
 
 import java.util.List;
 import java.util.Scanner;

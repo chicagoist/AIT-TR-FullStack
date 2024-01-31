@@ -1,8 +1,7 @@
-package model;
+package ait.model;
 
-import lesson_49.classwork.model.User;
-import repositories.UserRepository;
-import services.UserService;
+import ait.repositories.UserRepository;
+import ait.services.UserService;
 
 import java.util.List;
 
@@ -46,11 +45,11 @@ public class UserServiceImpl implements UserService {
 
         if(email == null || !email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9" +
                 ".-]+\\.[a-zA-Z]{2,}") || email.trim().isBlank()) {
-            throw new IllegalArgumentException(MSG_EMAIL_ALREADY_EXISTS_ERROR);
+            throw new IllegalArgumentException(MSG_EMAIL_NOT_CORRECT_ERROR);
         }
 
         if(repository.findByEmail(email) != null) {
-            throw new IllegalArgumentException(MSG_EMAIL_ALREADY_EXISTS_ERROR);
+            throw new IllegalArgumentException(MSG_EMAIL_NOT_CORRECT_ERROR);
         }
     }
 

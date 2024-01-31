@@ -1,4 +1,4 @@
-package model;
+package ait.model;
 
 import java.util.Objects;
 
