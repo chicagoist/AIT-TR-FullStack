@@ -7,5 +7,11 @@ public class Main {
         Middler middler = new Middler();
         System.out.println(middler.toString());
 
+        System.out.println("middler.middleNumber = "+middler.middleNumber);
+        System.out.println("middler.middleString = " + middler.middleString);
+
+        System.out.println("middler.superNumber = " +middler.superNumber);
+        System.out.println("middler.superString = " +middler.superString);
+
     }
 }
