@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AIT-TR.iml" filepath="$PROJECT_DIR$/.idea/AIT-TR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Syntax/src/Cons/Cons.iml" filepath="$PROJECT_DIR$/Java_Syntax/src/Cons/Cons.iml" />
       <module fileurl="file://$PROJECT_DIR$/Front/Front.iml" filepath="$PROJECT_DIR$/Front/Front.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Syntax/src/Lesson_01/Lesson_01.iml" filepath="$PROJECT_DIR$/Java_Syntax/src/Lesson_01/Lesson_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_02/Lesson_02.iml" filepath="$PROJECT_DIR$/Lesson_02/Lesson_02.iml" />
