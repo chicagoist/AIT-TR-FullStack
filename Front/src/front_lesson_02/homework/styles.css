@@ -2,7 +2,6 @@ a.rounded-corners {
     border-radius: 50%;
 }
 
-
 .header_logo {
     margin-bottom: 30px;
 }
@@ -41,16 +40,15 @@ nav a {
 /* Main section styling */
 main {
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 .main-sections {
-
     margin-bottom: 10px;
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 5px;
 }
-
 
 ul {
     list-style-type: none;
@@ -62,8 +60,8 @@ li {
 
 /* Footer styling */
 footer {
-    margin-top:100px;
-    background-color:#333;
+
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
@@ -73,7 +71,6 @@ footer {
 }
 
 .copyright-block {
-
     margin-top: 10px;
     background-color: #bbff00;
     padding: 10px;
@@ -91,4 +88,8 @@ span {
     font-style: italic;
 }
 
-
+.image-thumbnail {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
