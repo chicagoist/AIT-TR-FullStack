@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .header_logo {
     margin-bottom: 30px;
 }
@@ -141,13 +140,11 @@ span {
 .daniel-craig {
     border-style: wave;
     border-color: #e7070e;
-
 }
 
 .pierce-brosnan {
     border-style: double;
     border-color: #1d8304;
-
 }
 
 .timothy-dalton {
@@ -169,18 +166,20 @@ span {
     position: relative;
     top: -20px;
     left: -20px;
-
-
 }
 
 .james-bond {
     border-style: dashed;
     border-color: aqua;
     border-radius: 30px;
-
 }
 
-.sean-connery, .james-bond, .daniel-craig, .pierce-brosnan, .roger-moore, .timothy-dalton {
+.sean-connery,
+.james-bond,
+.daniel-craig,
+.pierce-brosnan,
+.roger-moore,
+.timothy-dalton {
     border-width: 4px 8px;
     background-image: url("./images/007_5.webp");
 }

@@ -47,7 +47,7 @@ _Сверстать страницу, в которой будет находи�
 
 ```html
 ./code/homework/index.html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
@@ -59,21 +59,13 @@ _Сверстать страницу, в которой будет находи�
     <div class="container">
       <div class="card card__dashed">
         <h2 class="cart_title">Quentin Tarantino</h2>
-        <img
-          src="./images/Quentin_Tarantino.jpg"
-          class="card-image"
-          alt="Quentin Tarantino photo"
-        />
+        <img src="./images/Quentin_Tarantino.jpg" class="card-image" alt="Quentin Tarantino photo" />
         <p class="age">Age: 60</p>
         <p class="gender">Gender: male</p>
       </div>
       <div class="card card__dotted">
         <h2 class="cart_title">Sofia Coppola</h2>
-        <img
-          src="./images/Sofia_Coppola_Cannes_2013.jpg"
-          alt="Sofia Coppola photo"
-          class="card-image"
-        />
+        <img src="./images/Sofia_Coppola_Cannes_2013.jpg" alt="Sofia Coppola photo" class="card-image" />
         <p class="age">Age: 53</p>
         <p class="gender">Gender: female</p>
       </div>
@@ -83,7 +75,7 @@ _Сверстать страницу, в которой будет находи�
           src="./images/Steven_Spielberg.jpg"
           alt="Steven Spielberg photo"
           title="Steven Spielberg"
-          class='card-image'
+          class="card-image"
         />
         <p class="age">Age: 77</p>
         <p class="gender">Gender: male</p>
@@ -94,75 +86,74 @@ _Сверстать страницу, в которой будет находи�
 ```
 
 ```css
-code/homework/styles.css
-* {
+code/homework/styles.css * {
   box-sizing: border-box;
 }
 
 html,
 body {
-height: 100%;
-margin: 0;
-padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-background-color: #08080649;
-padding: 40px;
+  background-color: #08080649;
+  padding: 40px;
 }
 
 .card {
-width: 400px;
-height: 500px;
-border: 2px solid rgb(56, 6, 12);
-padding: 20px;
-border-radius: 30px 80px;
-margin-bottom: 30px;
-text-align: center;
+  width: 400px;
+  height: 500px;
+  border: 2px solid rgb(56, 6, 12);
+  padding: 20px;
+  border-radius: 30px 80px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .card-image {
-width: 60%;
-/* height: 330px; */
+  width: 60%;
+  /* height: 330px; */
 }
 
 .cart_title {
-font-size: 30px;
-margin: 10px 0;
-color: rgb(70, 13, 32);
+  font-size: 30px;
+  margin: 10px 0;
+  color: rgb(70, 13, 32);
 }
 
 .age {
-font-size: 20px;
-margin: 10px 0;
-color: rgb(55, 13, 18);
+  font-size: 20px;
+  margin: 10px 0;
+  color: rgb(55, 13, 18);
 }
 
 .gender {
-font-size: 20px;
-margin: 8px 0;
-color: rgb(1, 1, 11);
+  font-size: 20px;
+  margin: 8px 0;
+  color: rgb(1, 1, 11);
 }
 
 .card__dashed {
-background-color: rgba(153, 196, 215, 0.47);
-border-style: dashed;
+  background-color: rgba(153, 196, 215, 0.47);
+  border-style: dashed;
 }
 
 .card__dotted {
-background-color: rgb(73, 123, 139);
-border-style: dotted;
+  background-color: rgb(73, 123, 139);
+  border-style: dotted;
 }
 
 .card__double {
-background-color: rgba(186, 197, 211, 0.442);
-border-style: double;
+  background-color: rgba(186, 197, 211, 0.442);
+  border-style: double;
 }
 ```
 
 ```html
 ./code/lesson/index.html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
@@ -190,17 +181,15 @@ border-style: double;
 ```
 
 ```css
-code/lesson/styles.css
-* {
+code/lesson/styles.css * {
   box-sizing: border-box;
 }
 
-
 html,
 body {
-min-height: 100%;
-margin: 0;
-padding: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -212,77 +201,77 @@ h6,
 p,
 ul,
 li {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-width: 100%;
-height: 100px;
-position: fixed;
-top: 0;
-padding: 20px;
-background-color: rgb(49, 102, 102);
-color: white;
-font-weight: bold;
-font-size: 26px;
-z-index: 4;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  background-color: rgb(49, 102, 102);
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  z-index: 4;
 }
 
 .cards-wrapper {
-width: 800px;
-height: 800px;
-/* Задаём позицию relative для расположения блока с позицией absolute внутри cards-wrapper */
-/* position: relative; */
-top: 200px;
-padding: 40px;
-margin: 200px 40px 40px;
-background-color: rgb(53, 59, 55);
+  width: 800px;
+  height: 800px;
+  /* Задаём позицию relative для расположения блока с позицией absolute внутри cards-wrapper */
+  /* position: relative; */
+  top: 200px;
+  padding: 40px;
+  margin: 200px 40px 40px;
+  background-color: rgb(53, 59, 55);
 }
 
 .card {
-width: 200px;
-height: 200px;
-padding: 20px;
-font-size: 26px;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  font-size: 26px;
 }
 
 .card-approach {
-background-color: rgb(119, 161, 204);
-border: 4px solid rgb(180, 194, 180);
-position: relative;
-top: 20px;
-left: 40px;
-z-index: 2;
+  background-color: rgb(119, 161, 204);
+  border: 4px solid rgb(180, 194, 180);
+  position: relative;
+  top: 20px;
+  left: 40px;
+  z-index: 2;
 }
 
 .card-team {
-background-color: rgb(174, 176, 111);
-border: 4px solid rgb(191, 194, 180);
-/* Пример абсолютного позиционирования элемента card-team */
-/* position: absolute;
+  background-color: rgb(174, 176, 111);
+  border: 4px solid rgb(191, 194, 180);
+  /* Пример абсолютного позиционирования элемента card-team */
+  /* position: absolute;
 top: 0;
 left: 0; */
-position: relative;
-bottom: 50px;
-left: 80px;
-z-index: 1;
+  position: relative;
+  bottom: 50px;
+  left: 80px;
+  z-index: 1;
 }
 
 .card-focus {
-background-color: rgb(176, 133, 111);
-border: 4px solid rgb(255, 216, 208);
-position: relative;
-bottom: 120px;
-left: 120px;
-z-index: 3;
+  background-color: rgb(176, 133, 111);
+  border: 4px solid rgb(255, 216, 208);
+  position: relative;
+  bottom: 120px;
+  left: 120px;
+  z-index: 3;
 }
 
 .card-quality {
-position: sticky;
-top: 10px;
-background-color: rgb(132, 206, 140);
-border: 4px solid rgb(214, 255, 208);
+  position: sticky;
+  top: 10px;
+  background-color: rgb(132, 206, 140);
+  border: 4px solid rgb(214, 255, 208);
 }
 
 /* img {
@@ -293,25 +282,25 @@ border-radius: 50%;
 } */
 
 .button {
-width: 50px;
-height: 50px;
-position: fixed;
-bottom: 50px;
-right: 50px;
-background-color: rgb(204, 245, 71);
-border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: rgb(204, 245, 71);
+  border-radius: 50%;
 }
 
 .image-background-block {
-/* Задание различных значения фона с помощью отдельных свойств */
-/* background-image: url(./images/rocks.jpg), url(./images/background-image.jpg); */
-/* background-repeat: no-repeat;
+  /* Задание различных значения фона с помощью отдельных свойств */
+  /* background-image: url(./images/rocks.jpg), url(./images/background-image.jpg); */
+  /* background-repeat: no-repeat;
 background-position: center;
 background-size: contain; */
-background: rgb(155, 127, 127) url(./images/rocks.jpg) no-repeat top;
-background-size: contain;
-color:beige;
-font-size: 46px;
-font-weight: bold;
+  background: rgb(155, 127, 127) url(./images/rocks.jpg) no-repeat top;
+  background-size: contain;
+  color: beige;
+  font-size: 46px;
+  font-weight: bold;
 }
 ```
