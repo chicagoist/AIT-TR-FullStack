@@ -94,7 +94,7 @@ _Сверстать страницу, в которой будет находи�
 ```
 
 ```css
-./code/homework/styles.css
+code/homework/styles.css
 * {
   box-sizing: border-box;
 }
@@ -190,7 +190,7 @@ border-style: double;
 ```
 
 ```css
-./code/lesson/styles.css
+code/lesson/styles.css
 * {
   box-sizing: border-box;
 }
