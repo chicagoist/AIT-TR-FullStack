@@ -68,13 +68,16 @@ When we talk about measuring the complexity of algorithms, we imply analyzing th
 
 **The devil is in the details!**
 
-****_Order of Growth_****
+\***\*_Order of Growth_\*\***
 
-The order of growth describes how the complexity of an algorithm increases as the size of the input data grows. It's most often represented using Big O notation (from German "Ordnung" - order): 
+The order of growth describes how the complexity of an algorithm increases as the size of the input data grows. It's
+most often represented using Big O notation (from German "Ordnung" - order):
 
-`O(f(x))`, 
+`O(f(x))`,
 
-where `f(x)` is a formula expressing the algorithm's complexity. The formula may contain the variable n, representing the size of the input data. Below is a list of the most commonly encountered orders of growth, but it's by no means exhaustive.
+where `f(x)` is a formula expressing the algorithm's complexity. The formula may contain the variable n, representing
+the size of the input data. Below is a list of the most commonly encountered orders of growth, but it's by no means
+exhaustive.
 
 **Constant** - O(1) An O(1) growth order means that the computational complexity of the algorithm doesn't depend on the size of the input data. It's important to note, however, that the one in the formula doesn't necessarily mean the algorithm executes in just one operation or requires very little time. It could take a microsecond or a year. What's significant is that this time doesn't depend on the input data.
 
@@ -94,11 +97,13 @@ Such algorithms are easy to identify by the presence of a loop for each element 
 
 **Порядок роста**
 
-Порядок роста описывает то, как сложность алгоритма растет с увеличением размера входных данных. Чаще всего он представлен в виде O-нотации (от нем. «Ordnung» — порядок): 
+Порядок роста описывает то, как сложность алгоритма растет с увеличением размера входных данных. Чаще всего он
+представлен в виде O-нотации (от нем. «Ordnung» — порядок):
 
-`O(f(x))`, 
+`O(f(x))`,
 
-где `f(x)` — формула, выражающая сложность алгоритма. В формуле может присутствовать переменная n, представляющая размер входных данных. Ниже приводится список наиболее часто встречающихся порядков роста, но он ни в коем случае не полный.
+где `f(x)` — формула, выражающая сложность алгоритма. В формуле может присутствовать переменная n, представляющая размер
+входных данных. Ниже приводится список наиболее часто встречающихся порядков роста, но он ни в коем случае не полный.
 
 **Константный** — O(1)
 
@@ -396,8 +401,8 @@ List<Person> persons = Arrays.asList(person1,person2,person3,person4,person5);
 code/homework48/src/Person.java
 
 public class Person {
-private String name;
-private int age;
+    private final String name;
+    private final int age;
 
     public Person(String name, int age) {
         this.name = name;
@@ -423,7 +428,6 @@ private int age;
 ```
 
 **HOME WORK**
-
 
     Получить и вывести на экран:
     -текущую дату

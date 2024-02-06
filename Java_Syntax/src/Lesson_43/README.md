@@ -34,6 +34,7 @@ All other classes working with streams are descendants of these abstract classes
 
 \
 code/homework43/src/AnagramList.java
+
 ```java
 import java.util.*;
 
@@ -93,8 +94,10 @@ bill = [bill]
 }
 
 ```
+
 \
 code/io_streams/src/Main.java
+
 ```java
 import java.io.File;
 import java.io.FileInputStream;
@@ -208,6 +211,7 @@ public class Main {
 
 \
 code/io_streams/src/Main1.java
+
 ```java
 import java.io.*;
 
@@ -303,8 +307,10 @@ public class Main1 {
 
 
 ```
+
 \
 **Homework:**
+
 ```text
 Task 1
 

@@ -37,7 +37,7 @@ In JDK 8, along with the functionality of lambda expressions, a number of built-
 Ссылка на метод передается в виде:
 
 ```text
-имя_класса::имя_статического_метода (если 
+имя_класса::имя_статического_метода (если
 метод статический)
 
 или
@@ -91,7 +91,7 @@ public class Main {
         System.out.println(square.apply(2));
 
         // Function<T,R> -  принимает тип T,  возвращает R
-        Function<Integer,String> modify = i -> String.valueOf(i) +" years";
+        Function<Integer,String> modify = i -> i +" years";
         System.out.println(modify.apply(50));
 
         /*
@@ -111,6 +111,7 @@ public class Main {
     }
 }
 ```
+
 ```java
 code/homework45/src/Homework.java
 
@@ -178,6 +179,7 @@ public class Person implements Comparable<Person>{
     }
 }
 ```
+
 ```java
 code/lambda/src/IsMoreInterface.java
 
@@ -207,7 +209,7 @@ public class Main {
         System.out.println( sumIfCond(ints,condition));
         condition = n -> n < 30;
         System.out.println( sumIfCond(ints,condition));
-        
+
     }
     public static int sumIfCond( int[] ints, IsMoreInterface lambdaExpression){
         int sum = 0;
@@ -310,13 +312,13 @@ public class Main {
 code/method_reference/src/Person.java
 
 public class Person {
-    private String name;
+    private final String name;
 
-    Person( String name){
+    Person(String name) {
         this.name = name;
     }
 
-    String getName(){
+    String getName() {
         return name;
     }
 }
@@ -424,8 +426,8 @@ public interface Transformable {
 **HONE WORK**
 
 ```text
-Переписать лямбда выражения из класса Main пакета 
-our_interfaces (см.код) с использованием стандартных 
+Переписать лямбда выражения из класса Main пакета
+our_interfaces (см.код) с использованием стандартных
 функциональных интерфейсов
 
 ```

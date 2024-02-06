@@ -14,9 +14,9 @@ A lambda expression doesn't execute by itself; instead, it forms an implementati
 
 Лямбда-выражение не выполняется само по себе, а образует реализацию метода, определенного в функциональном интерфейсе. При этом важно, что функциональный интерфейс должен содержать только один единственный метод без реализации.
 
-
 \
 _code/consultation44/src/Checkable.java_
+
 ```java
 public interface Checkable {
 boolean check( String str);
@@ -25,6 +25,7 @@ boolean check( String str);
 
 \
 _code/consultation44/src/Main.java_
+
 ```java
 import java.io.*;
 import java.util.HashMap;
@@ -97,6 +98,7 @@ public class Main {
 
 \
 _code/consultation44/src/Transformable.java_
+
 ```java
 public interface Transformable {
     String modify(String str);
@@ -105,6 +107,7 @@ public interface Transformable {
 
 \
 _code/homework44/src/Homework.java_
+
 ```java
 import java.io.BufferedReader;
 import java.io.File;
@@ -179,6 +182,7 @@ cc
 
 \
 _code/io_close/src/Main.java_
+
 ```java
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -230,6 +234,7 @@ public class Main {
 
 \
 _code/io_close/src/Person.java_
+
 ```java
 public class Person implements Comparable<Person>{
     String name;
@@ -256,6 +261,7 @@ public class Person implements Comparable<Person>{
 
 \
 _code/io_close/src/Task.java_
+
 ```java
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -306,6 +312,7 @@ public class Task {
 
 \
 _code/lambda_expressions/src/Arithmetical.java_
+
 ```java
 public interface Arithmetical {
    int calculate( int i, int j);
@@ -314,6 +321,7 @@ public interface Arithmetical {
 
 \
 _code/lambda_expressions/src/Eatable.java_
+
 ```java
 public interface Eatable {
     String eat( String food);
@@ -322,6 +330,7 @@ public interface Eatable {
 
 \
 _code/lambda_expressions/src/Flyable.java_
+
 ```java
 @FunctionalInterface
 public interface Flyable {
@@ -331,6 +340,7 @@ public interface Flyable {
 ```
 
 _code/lambda_expressions/src/Main.java_
+
 ```java
 import java.util.ArrayList;
 import java.util.Collections;
@@ -429,6 +439,7 @@ public class Main {
 
 \
 _code/lambda_expressions/src/Product.java_
+
 ```java
 public class Product {
     String name;
@@ -451,11 +462,13 @@ public class Product {
 
 \
 _code/lambda_expressions/src/Walkable.java_
+
 ```java
 public interface Walkable {
     String walk();
 }
 ```
+
 \
 **HOME WORK**
 

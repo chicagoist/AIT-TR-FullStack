@@ -225,7 +225,6 @@ public class OurLinkedList <E> implements OurList<E>{
 }
 ```
 
-
 ```java
 code/consultation50/src/OurList.java
 
@@ -297,17 +296,17 @@ import java.util.List;
 
 public interface UserController {
 
-    public void create();
+    void create();
 
     User getById();
     User getByEmail();
 
-    public List<User> getAll();
-    public void printAll();
+    List<User> getAll();
+    void printAll();
 
-    public void delete();
+    void delete();
 
-    public void update();
+    void update();
 }
 ```
 
@@ -322,7 +321,7 @@ import java.util.Scanner;
 
 public class UserControllerConsoleImpl implements UserController{
 Scanner scanner = new Scanner(System.in);
-private UserService service;
+private final UserService service;
 
     public UserControllerConsoleImpl(UserService service){
         this.service = service;
@@ -489,7 +488,7 @@ code/repositories_/src/UserRepository.java
 import ait.model.User;
 
 public interface UserRepository extends CrudRepository<User>{
-public User findByEmail( String email);
+User findByEmail( String email);
 }
 ```
 
@@ -565,14 +564,14 @@ import java.util.List;
 
 public interface UserService {
 
-    public void createUser( String name, String email);
-    public User getById( long id);
-    public User getByEmail(String email);
+    void createUser( String name, String email);
+    User getById( long id);
+    User getByEmail(String email);
 
-    public List<User> getAllUsers();
+    List<User> getAllUsers();
 
-    public void updateUser(User user);
-    public void deleteById( long id);
+    void updateUser(User user);
+    void deleteById( long id);
 }
 ```
 
@@ -584,41 +583,41 @@ import ait.repositories.UserRepository;
 
 import java.util.List;
 
-public class UserServiceImpl implements UserService{
-private static final String MSG_BLANK_ARG_ERROR = "The name and/or email should not be blank";
-private static final String MSG_EMAIL_NOT_CORRECT_ERROR = " Incorrect email format";
-private static final String MSG_EMAIL_ALREADY_EXISTS_ERROR = "The user with this email already exists";
+public class UserServiceImpl implements UserService {
+    private static final String MSG_BLANK_ARG_ERROR = "The name and/or email should not be blank";
+    private static final String MSG_EMAIL_NOT_CORRECT_ERROR = " Incorrect email format";
+    private static final String MSG_EMAIL_ALREADY_EXISTS_ERROR = "The user with this email already exists";
 
     private static final String MSG_USER_NOT_EXIST_ERROR = "The user does not exist";
 
-    private UserRepository repository;
+    private final UserRepository repository;
 
-    public UserServiceImpl(UserRepository repository){
+    public UserServiceImpl(UserRepository repository) {
         this.repository = repository;
     }
 
     @Override
     public void createUser(String name, String email) {
-    try {
-        checkUserParameters(name, email);
-        repository.save(new User(name, email));
-    } catch(Exception e){
-        String message = String.format("Error creating user: name:%s email:%s%n%s%n",name,email,e.getMessage());
-        throw new RuntimeException(message);
-    }
+        try {
+            checkUserParameters(name, email);
+            repository.save(new User(name, email));
+        } catch (Exception e) {
+            String message = String.format("Error creating user: name:%s email:%s%n%s%n", name, email, e.getMessage());
+            throw new RuntimeException(message);
+        }
 
     }
 
-    private void checkUserParameters(String name, String email){
-        if (name == null || email == null || name.isBlank() || email.isBlank()){
+    private void checkUserParameters(String name, String email) {
+        if (name == null || email == null || name.isBlank() || email.isBlank()) {
             throw new IllegalArgumentException(MSG_BLANK_ARG_ERROR);
         }
 
-        if(email.indexOf('@') < 0){
+        if (email.indexOf('@') < 0) {
             throw new IllegalArgumentException(MSG_EMAIL_NOT_CORRECT_ERROR);
         }
 
-        if(repository.findByEmail(email) != null){
+        if (repository.findByEmail(email) != null) {
             throw new IllegalArgumentException(MSG_EMAIL_ALREADY_EXISTS_ERROR);
         }
 
@@ -627,18 +626,17 @@ private static final String MSG_EMAIL_ALREADY_EXISTS_ERROR = "The user with this
     @Override
     public User getById(long id) {
 
-      User foundUser =  repository.findById(id);
-      if(foundUser == null) {
-          throw new IllegalArgumentException(MSG_USER_NOT_EXIST_ERROR);
-      }
-      else
-          return foundUser;
+        User foundUser = repository.findById(id);
+        if (foundUser == null) {
+            throw new IllegalArgumentException(MSG_USER_NOT_EXIST_ERROR);
+        } else
+            return foundUser;
     }
 
     @Override
     public User getByEmail(String email) {
         User foundUser = repository.findByEmail(email);
-        if(foundUser == null)
+        if (foundUser == null)
             throw new IllegalArgumentException(MSG_USER_NOT_EXIST_ERROR);
         else return foundUser;
     }
@@ -653,16 +651,16 @@ private static final String MSG_EMAIL_ALREADY_EXISTS_ERROR = "The user with this
         try {
             checkUserParameters(user.getName(), user.getEmail());
             repository.update(user);
-        } catch (Exception e){
+        } catch (Exception e) {
             String message = String.format("Error creating user: name:%s email:%s%n%s%n",
-                    user.getName(),user.getEmail(),e.getMessage());
+                    user.getName(), user.getEmail(), e.getMessage());
             throw new RuntimeException(message);
         }
     }
 
     @Override
     public void deleteById(long id) {
-            repository.deleteById(id);
+        repository.deleteById(id);
     }
 }
 ```

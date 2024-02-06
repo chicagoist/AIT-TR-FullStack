@@ -11,8 +11,6 @@ Streams are described in the java.util.stream package, with the full class name 
 
 [Stream Class Documentation](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Stream.html)
 
-
-
 **Creating Streams**
 
 ##### Empty Stream
@@ -112,6 +110,7 @@ The general idea of intermediate operations "in a chain" should already be famil
     noneMatch(Predicate predicate) returns true if no element in the stream satisfies the condition.
 
 #### Collectors
+
 [documetation](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Collectors.html)
 
 Some collectors are already defined in the Collectors class (documentation).
@@ -176,12 +175,14 @@ IntStream.of(50, 60, 70, 80, 90, 100, 110, 120)
 ```
 
 #### Потоки (Stream) в Java
+
 [Stream Class документация (EN)](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Stream.html)
 
-Поток - способ работать с данными, не меняя их источник. Поток, как и в реальном мире, не возможно повернуть назад или обойти повторно.
+Поток - способ работать с данными, не меняя их источник. Поток, как и в реальном мире, не возможно повернуть назад или
+обойти повторно.
 
-Потоки описаны в пакете ```javajava.util.stream```, полное имя класса - 
-```javajava.util.stream.Stream.```
+Потоки описаны в пакете `javajava.util.stream`, полное имя класса -
+`javajava.util.stream.Stream.`
 
 ###Класс Stream
 ####Создание потоков
@@ -191,7 +192,7 @@ IntStream.of(50, 60, 70, 80, 90, 100, 110, 120)
 Stream<String> streamEmpty = Stream.empty();
 ```
 
-Может пригодиться нам там, где мы не хотим передавать ```null``` и вызывать ```NullPointerException```, например:
+Может пригодиться нам там, где мы не хотим передавать `null` и вызывать `NullPointerException`, например:
 
 ```java
 public Stream<String> streamOf(List<String> list) {
@@ -211,14 +212,15 @@ Collection<String> collection = Arrays.asList("a", "b", "c");
 Stream<String> streamOfCollection = collection.stream();
 ```
 
-####Поток на основе массива
+#### Поток на основе массива
 
 Поток модно создавать как на основе перечисленных в аргументах данных
 
 ```java
 Stream<String> stream = Stream.of("a", "b", "c");
 ```
-####Так и с использованием метода  ```Arrays.stream```:
+
+#### Так и с использованием метода `Arrays.stream`:
 
 ```java
 String[] arr = {"a", "b", "c"};
@@ -226,9 +228,10 @@ Stream<String> streamOfArrayFull = Arrays.stream(arr);
 Stream<String> streamOfArrayPart = Arrays.stream(arr, 1, 3);
 ```
 
-####Потоки объектов примитивных типов
+#### Потоки объектов примитивных типов
 
-Для потоков, содержащих в себе ```int```, ```long``` и ```double```, существуют классы ```IntStream```, ```LongStream``` и ```DoubleStream``` соответственно.
+Для потоков, содержащих в себе `int`, `long` и `double`, существуют классы `IntStream`, `LongStream` и `DoubleStream`
+соответственно.
 
 ###Работа с потоками
 ####Работа с потоками обычно выглядит следующим образом:
@@ -281,7 +284,9 @@ _Терминальные_ (ещё называют "_eager_" - жаждущие
 
 ####Коллекторы
 
-Некоторые коллекторы уже описаны в классе ```Collectors``` ([документация](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Collectors.html)).
+Некоторые коллекторы уже описаны в
+классе `Collectors` ([документация](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Collectors.html))
+.
 
     toList() собирает элементы в List
     toSet() cобирает элементы в множество
@@ -334,8 +339,8 @@ IntStream.of(50, 60, 70, 80, 90, 100, 110, 120).filter(x -> x < 90).map(x -> x +
 
 ```java
 public class Address {
-private String street;
-private int houseNumber;
+private final String street;
+private final int houseNumber;
 
     public Address(String street, int houseNumber) {
         this.street = street;
@@ -435,9 +440,9 @@ withoutDuplicates(list);
 
 ```java
 public class Person {
-private String name;
-private int age;
-private Address address;
+private final String name;
+private final int age;
+private final Address address;
 
 
     public Person(String name, int age, Address address) {
@@ -464,8 +469,8 @@ private Address address;
 
 ```java
 public class Car {
-private String brand;
-private int price;
+    private final String brand;
+    private final int price;
 
     public Car(String brand, int price) {
         this.brand = brand;

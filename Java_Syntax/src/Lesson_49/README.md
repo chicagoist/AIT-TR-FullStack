@@ -3,14 +3,13 @@
     Многослойная архитектура
     Проект по реализации консольного приложения с трехслойной архитектурой
 
-**архитектура приложения** 
+**архитектура приложения**
 
 (`Controller-Service-Repository`)
 
+**Классическая архитектура приложения**
 
-**Классическая архитектура приложения** 
-
-`Controller-Service-Repository` 
+`Controller-Service-Repository`
 
 включает следующие слои:
 
@@ -67,8 +66,8 @@ public class Box {
 code/consultation49/src/Employee.java
 
 public class Employee {
-private String name;
-private int salary;
+private final String name;
+private final int salary;
 
     public Employee(String name, int salary) {
         this.name = name;
@@ -306,17 +305,17 @@ import java.util.List;
 
 public interface UserController {
 
-    public void create();
+    void create();
 
     User getById();
     User getByEmail();
 
-    public List<User> getAll();
-    public void printAll();
+    List<User> getAll();
+    void printAll();
 
-    public void delete();
+    void delete();
 
-    public void update();
+    void update();
 }
 ```
 
@@ -331,7 +330,7 @@ import java.util.Scanner;
 
 public class UserControllerConsoleImpl implements UserController{
 Scanner scanner = new Scanner(System.in);
-private UserService service;
+private final UserService service;
 
     public UserControllerConsoleImpl(UserService service){
         this.service = service;
@@ -477,7 +476,6 @@ public class User {
 }
 ```
 
-
 ```java
 code/repositories/src/CrudRepository.java
 
@@ -499,7 +497,7 @@ code/repositories/src/UserRepository.java
 import ait.model.User;
 
 public interface UserRepository extends CrudRepository<User>{
-public User findByEmail( String email);
+User findByEmail( String email);
 }
 ```
 
@@ -512,13 +510,16 @@ import java.util.List;
 
 public interface UserService {
 
-    public void createUser( String name, String email);
-    public User getById( long id);
-    public User getByEmail(String email);
+    void createUser(String name, String email);
 
-    public List<User> getAllUsers();
+    User getById(long id);
 
-    public void updateUser(User user);
-    public void deleteById( long id);
+    User getByEmail(String email);
+
+    List<User> getAllUsers();
+
+    void updateUser(User user);
+
+    void deleteById(long id);
 }
 ```
