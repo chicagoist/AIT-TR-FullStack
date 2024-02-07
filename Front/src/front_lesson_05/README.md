@@ -31,75 +31,74 @@
 ```html
 code/homework/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./styles.css" type="text/css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
     <title>Homework3</title>
-</head>
-<body>
-<header>
-    <h1>My favorite actors</h1>
-</header>
-<div class="card border__double">
-    <h2 class='font__modif'>Kristen Stewart</h2>
-    <img src="./image/kristen.jpg"/>
-    <ul>
-        <li class='font__modif'>Age 33</li>
-        <li class='font__modif'>Female</li>
-    </ul>
-</div>
-<div class="card border__groove">
-    <h2 class='font__modif'>Robert Pattinson</h2>
-    <img src="./image/robert.jpg"/>
-    <ul>
-        <li class='font__modif'>Age 37</li>
-        <li class='font__modif'>Male</li>
-    </ul>
-</div>
-<div class="card border__dashed">
-    <h2 class='font__modif'>Taylor Lautner</h2>
-    <img src="./image/taylor.jpg"/>
-    <ul>
-        <li class='font__modif'>Age 31</li>
-        <li class='font__modif'>Male</li>
-    </ul>
-</div>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>My favorite actors</h1>
+    </header>
+    <div class="card border__double">
+      <h2 class="font__modif">Kristen Stewart</h2>
+      <img src="./image/kristen.jpg" />
+      <ul>
+        <li class="font__modif">Age 33</li>
+        <li class="font__modif">Female</li>
+      </ul>
+    </div>
+    <div class="card border__groove">
+      <h2 class="font__modif">Robert Pattinson</h2>
+      <img src="./image/robert.jpg" />
+      <ul>
+        <li class="font__modif">Age 37</li>
+        <li class="font__modif">Male</li>
+      </ul>
+    </div>
+    <div class="card border__dashed">
+      <h2 class="font__modif">Taylor Lautner</h2>
+      <img src="./image/taylor.jpg" />
+      <ul>
+        <li class="font__modif">Age 31</li>
+        <li class="font__modif">Male</li>
+      </ul>
+    </div>
+  </body>
 </html>
 ```
 
 ```css
-code /homework/ styles.css
-* {
-    box-sizing: border-box;
+code /homework/ styles.css * {
+  box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(252, 249, 244);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 249, 244);
 }
 
 header {
-    background-color: rgb(115, 164, 164);
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    font-size: 30px;
-    font-family: "Lucida Sans";
+  background-color: rgb(115, 164, 164);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  font-size: 30px;
+  font-family: "Lucida Sans";
 }
 
 .font__modif {
-    color: black;
-    font: 1em sans-serif;
+  color: black;
+  font: 1em sans-serif;
 }
 
 /* li, h2 {
@@ -107,50 +106,49 @@ color: black;
 font: 1em sans-serif;
 } */
 
-
 h1 {
-    color: white;
+  color: white;
 }
 
 .card {
-    padding: 20px;
-    width: 400px;
-    height: 500px;
-    border-width: 2px;
-    /* text-align: center; */
-    /* margin: 30px; */
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  border-width: 2px;
+  /* text-align: center; */
+  /* margin: 30px; */
 }
 
 .border__double {
-    border-style: double;
-    border-color: rgb(46, 18, 106);
-    background-color: rgb(193, 240, 190);
-    position: relative;
-    top: 250px;
-    left: 200px;
-    z-index: 1;
+  border-style: double;
+  border-color: rgb(46, 18, 106);
+  background-color: rgb(193, 240, 190);
+  position: relative;
+  top: 250px;
+  left: 200px;
+  z-index: 1;
 }
 
 .border__groove {
-    border-style: groove;
-    border-color: rgb(151, 148, 143);
-    background-color: rgb(230, 221, 210);
-    border-radius: 50px;
-    position: relative;
-    top: 200px;
-    left: 350px;
-    z-index: 2;
+  border-style: groove;
+  border-color: rgb(151, 148, 143);
+  background-color: rgb(230, 221, 210);
+  border-radius: 50px;
+  position: relative;
+  top: 200px;
+  left: 350px;
+  z-index: 2;
 }
 
 .border__dashed {
-    border-style: dashed;
-    border-color: blanchedalmond;
-    background-color: rgb(146, 153, 131);
-    /* border: 10px dashed blanchedalmond; */
-    position: relative;
-    top: 150px;
-    left: 450px;
-    z-index: 3;
+  border-style: dashed;
+  border-color: blanchedalmond;
+  background-color: rgb(146, 153, 131);
+  /* border: 10px dashed blanchedalmond; */
+  position: relative;
+  top: 150px;
+  left: 450px;
+  z-index: 3;
 }
 ```
 
@@ -203,16 +201,15 @@ code/lesson/index.html
 ```
 
 ```css
-code /lesson/ styles.css
-* {
-    box-sizing: border-box;
+code /lesson/ styles.css * {
+  box-sizing: border-box;
 }
 
 html,
 body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -224,8 +221,8 @@ h6,
 p,
 ul,
 li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Работа с display */
@@ -261,49 +258,48 @@ font-size: 20px;
 
 /* Работа с flexbox */
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: stretch;
-    width: 100%;
-    height: 850px;
-    background-color: rgb(172, 223, 223);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: stretch;
+  width: 100%;
+  height: 850px;
+  background-color: rgb(172, 223, 223);
 }
 
 .card {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-    margin: 10px;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
 }
 
 img {
-    width: 200px;
+  width: 200px;
 }
 
 .card-penguin {
-    background-color: rgb(220, 204, 117);
-    border: 4px solid rgb(177, 132, 27);
-    /* font-size: 24px; */
+  background-color: rgb(220, 204, 117);
+  border: 4px solid rgb(177, 132, 27);
+  /* font-size: 24px; */
 }
 
 .card-elephant {
-    background-color: rgb(147, 146, 143);
-    border: 4px solid rgb(55, 54, 52);
-    /* font-size: 40px; */
+  background-color: rgb(147, 146, 143);
+  border: 4px solid rgb(55, 54, 52);
+  /* font-size: 40px; */
 }
 
 .card-butterfly {
-    background-color: rgb(93, 131, 177);
-    border: 4px solid rgb(53, 48, 86);
-    /* font-size: 12px; */
+  background-color: rgb(93, 131, 177);
+  border: 4px solid rgb(53, 48, 86);
+  /* font-size: 12px; */
 }
 
 .card-dolphin {
-    background-color: rgb(227, 171, 160);
-    border: 4px solid rgb(92, 29, 19)
+  background-color: rgb(227, 171, 160);
+  border: 4px solid rgb(92, 29, 19);
 }
 ```
-
