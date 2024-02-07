@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,kotlin,android,androidstudio,maven,gradle,jetbrains,jetbrains+all,jetbrains+iml,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,kotlin,android,androidstudio,maven,gradle,jetbrains,jetbrains+all,jetbrains+iml,cmake
 
+node_modules/*
+/node_modules/
+
 ### Android ###
 # Gradle files
 .gradle/
@@ -474,3 +477,4 @@ obj/
 # End of https://www.toptal.com/developers/gitignore/api/java,kotlin,android,androidstudio,maven,gradle,jetbrains,jetbrains+all,jetbrains+iml,cmake
 
 /Lesson_27/FactoryGPT.txt
+/node_modules/
