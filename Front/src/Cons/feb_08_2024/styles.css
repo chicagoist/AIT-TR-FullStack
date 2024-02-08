@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    margin-bottom: 30px;
+}
+
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    width: 100%;
+    height: auto;
+    background-color: rgb(172, 223, 223);
+}
+
+.user-card_item {
+    width: 400px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.user-card_item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.user-card_item p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-bottom: 9%;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.company-info div {
+    margin-right: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0;
+}
+
+.copyright-block {
+    margin-top: 10px;
+    background-color: #bbff00;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.image-thumbnail {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.craig {
+    border-style: wave;
+    border-color: #e7070e;
+}
+
+.brosnan {
+    border-style: double;
+    border-color: #1d8304;
+}
+
+.dalton {
+    border-style: dashed;
+    border-color: #550351;
+}
+
+.moore {
+    border-style: dot-dash;
+    border-color: #0062ff;
+}
+
+.connery {
+    border-style: inset;
+    border-color: #eded07;
+}
+
+.brosnan,
+.craig,
+.connery,
+.moore,
+.dalton {
+    margin: 10px;
+    border-width: 4px 8px;
+}
