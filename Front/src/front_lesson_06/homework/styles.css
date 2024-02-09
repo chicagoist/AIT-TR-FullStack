@@ -59,7 +59,7 @@ img {
   height: auto;
 }
 
-form {
+/*form {
   width: 100%;
   max-width: 400px;
   padding: 20px;
@@ -67,7 +67,20 @@ form {
   border-radius: 5px;
   align-items: center;
   justify-content: center;
+}*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;*/
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
 }
+
 
 h1 {
   text-align: center;
@@ -100,3 +113,4 @@ button {
   border: none;
   border-radius: 5px;
 }
+
