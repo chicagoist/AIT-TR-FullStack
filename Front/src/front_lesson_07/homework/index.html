@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lesson 06 Homework</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <header class="wrap">
+            <div class="header_top">
+                <div class="face_logo">
+                    <a href="#"
+                    ><img alt="adium" class="rounded-corners" src="images/Adium.png" title="Audium Logo" width="100"
+                    /></a>
+                </div>
+                <nav class="header_menu">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+            <h3>Домашняя работа к уроку 06</h3>
+        </header>
+    </div>
+</div>
+<div>
+    <main>
+        <form id="contact-form" style="text-align: center">
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required maxlength="20"/>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone*</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required/>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <option value="New York" selected>New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Boston">Boston</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="agree" name="agree"/>
+                <label for="agree">I agree</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">SEND REQUEST</button>
+                <button type="reset">CLEAR FORM</button>
+            </div>
+        </form>
+    </main>
+</div>
+</body>
+<div>
+    <footer class="footer">
+        Ссылки,логотип и информация о сайте
+        <div class="copyright-block">
+            <a href="https://github.com/chicagoist/AIT-TR-FullStack/tree/main/Front/src" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</div>
+</html>

@@ -62,7 +62,7 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%;*/
   max-width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -77,6 +77,10 @@ h1 {
 }
 
 .form-group {
+  display: flex;
+  /*flex-direction: row;*/
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
