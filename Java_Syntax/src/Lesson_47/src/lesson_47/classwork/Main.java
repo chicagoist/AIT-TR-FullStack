@@ -13,7 +13,7 @@ public class Main {
                 .forEach(System.out::println);
 
         // FlatMap
-        String[] arrayStringFlat = {"Hello","Java"};
+       // String[] arrayStringFlat = {"Hello","Java"};
         Arrays.stream(arrayString)
                 .map(str -> str.split(""))
                 .flatMap(Arrays::stream)

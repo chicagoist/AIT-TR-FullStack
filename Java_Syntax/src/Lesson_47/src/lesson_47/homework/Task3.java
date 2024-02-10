@@ -1,7 +1,6 @@
 package lesson_47.homework;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Task3 {
     /*
