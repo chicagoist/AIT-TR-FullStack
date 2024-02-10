@@ -2,8 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,kotlin,android,androidstudio,maven,gradle,jetbrains,jetbrains+all,jetbrains+iml,cmake
 
 node_modules/*
-/node_modules/*
-node_modules
+/node_modules/
 
 ### Android ###
 # Gradle files
