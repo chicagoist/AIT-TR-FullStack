@@ -4,32 +4,30 @@
     <link rel="stylesheet" href="styles.css" type="text/css"/>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Lesson 06 Homework</title>
+    <title>Lesson 07 Homework</title>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <header class="wrap">
-            <div class="header_top">
-                <div class="face_logo">
-                    <a href="#"
-                    ><img alt="adium" class="rounded-corners" src="images/Adium.png" title="Audium Logo" width=100
-                    /></a>
-                </div>
-                <nav class="header_menu">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
-                </nav>
+<header>
+    <div class="wrap">
+        <div class="header_top">
+            <div class="face_logo">
+                <a href="#">
+                    <img alt="adium" class="rounded-corners" src="images/Adium.png" title="Audium Logo" width="100"/>
+                </a>
             </div>
-            <h3>Домашняя работа к уроку 06</h3>
-        </header>
+            <nav class="header_menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <h3>Домашняя работа к уроку 07</h3>
     </div>
-</div>
-<div>
-    <main>
-        <form id="contact-form" style="text-align: center">
+</header>
+<main>
+    <section class="form-section-one">
+        <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name*</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required maxlength="20"/>
@@ -64,15 +62,72 @@
                 <button type="reset">CLEAR FORM</button>
             </div>
         </form>
-    </main>
-</div>
-</body>
-<div>
-    <footer class="footer">
-        Ссылки,логотип и информация о сайте
+    </section>
+    <aside>
+        <form id="contact-form-two">
+            <div class="form-group">
+                <label for="name-two">Name*</label>
+                <input type="text" id="name-two" name="name" placeholder="Your name" required maxlength="20"/>
+            </div>
+            <div class="form-group">
+                <label for="phone-two">Phone*</label>
+                <input type="tel" id="phone-two" name="phone" placeholder="Your phone number" required/>
+            </div>
+            <div class="form-group">
+                <label for="email-two">Email*</label>
+                <input type="email" id="email-two" name="email" placeholder="Your email" required/>
+            </div>
+            <div class="form-group">
+                <label for="location-two">Location</label>
+                <select id="location-two" name="location">
+                    <option value="New York" selected>New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Boston">Boston</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message-two">Message*</label>
+                <textarea id="message-two" name="message-two" placeholder="Your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="agree-two" name="agree"/>
+                <label for="agree-two">I agree</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">SEND REQUEST</button>
+                <button type="reset">CLEAR FORM</button>
+            </div>
+        </form>
+    </aside>
+</main>
+<footer class="footer">
+    <div class="wrap">
+        <p>Ссылки, логотип и информация о сайте</p>
         <div class="copyright-block">
             <a href="https://github.com/chicagoist/AIT-TR-FullStack/tree/main/Front/src" target="_blank">GitHub</a>
         </div>
-    </footer>
-</div>
+    </div>
+</footer>
+</body>
 </html>
+
+<!--
+Homework
+Задание
+
+Создайте вёрстку страницы используя только концепицию Grid (в новых файлах styles.css и index.html)
+
+Требования:
+
+    страница должна иметь 4 главных элемента: header, main, aside и footer
+    main и aside должны находиться в одном ряду
+    header и footer должны занимать целые строки
+    main должен состоять из 3-х секций. Первые две секции занимают по одной вертикальной ячейке,
+    3-я секция занимает две вертикальные ячейки
+    заполнение контентом всех перечисленных выше элементов можете выбрать самое простое, влоть
+    до простого текста или даже слова
+    стилизация на ваше усмотрение
+
+
+-->
