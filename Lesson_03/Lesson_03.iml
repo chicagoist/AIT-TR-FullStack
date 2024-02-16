@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../Java_Syntax/src/Lesson_03">
       <sourceFolder url="file://$MODULE_DIR$/../Java_Syntax/src/Lesson_03/src" isTestSource="false" />
     </content>
+    <orderEntry type="jdk" jdkName="azul-18" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
