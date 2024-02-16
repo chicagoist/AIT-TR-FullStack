@@ -1,12 +1,11 @@
-let temperature = prompt('Введите значение температуры', '0')
-
+let temperature = prompt("Введите значение температуры", "0")
 
 if (temperature < 0) {
-  console.log('Холодно!');
+  console.log("Холодно!")
 } else if (20 >= temperature && temperature >= 0) {
-  console.log('Прохладно');
+  console.log("Прохладно")
 } else if (30 >= temperature && temperature >= 21) {
-  console.log('Тепло');
+  console.log("Тепло")
 } else {
-  console.log('Жарко!');
+  console.log("Жарко!")
 }

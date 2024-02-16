@@ -1,8 +1,8 @@
 {
-  "devDependencies": {
-    "prettier": "3.2.5"
-  },
   "dependencies": {
-    "npx": "^10.2.2"
+    "npx": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.0"
   }
 }
