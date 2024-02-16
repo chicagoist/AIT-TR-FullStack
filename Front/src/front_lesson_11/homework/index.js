@@ -6,6 +6,8 @@ if (temperature < 0) {
   console.log("Прохладно")
 } else if (30 >= temperature && temperature >= 21) {
   console.log("Тепло")
-} else {
+} else if (temperature >= 31) {
   console.log("Жарко!")
+} else {
+  console.log("Введите числовое значений!")
 }
