@@ -1,176 +1,256 @@
-**Задачи на урок:**
 
-    Циклы: while, do while
-    Методы строк
-    Functions: introduction
-    Область видимости, hoisting (поднятие)
 
-**JS: Functions**
 
-**Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_13/JS_Functions.pdf)**
+Задачи на урок:
+
+    Function types
+    DOM как объектная модель
+    DOM как программный интерфейс
+    Типы узлов
+
+JS: Function types, DOM
+
+**Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_14/JS_Function_types_DOM.pdf)**
 
 **Homework**
 
-_Задача 1_
+Задание
 
-Напишите функцию, которая принимает два числа и возвращает большее значение. Вызов функции присвоить переменной и отобразить результат(переменную) в консоле
 
-_Задача 2_
+Необходимо создать функцию с названием arrayProcessor, которая будет принимать два параметра, первый параметр - массив, второй параметр - функция callback
 
-Напишите функцию, которая принимает строку и число n, а затем возвращает первые n символов строки. Для отображения результа работы функции, вызовите её три раза с различными параметрами, результат каждого вызова присвойте отдельной переменной и выведите переменные в консоль
+Требования:
 
-_Задача 3_
+    Функция arrayProcessor должна выполнять 3 действия:
 
-Напишите функцию, которая принимает массив и элемент, а затем возвращает true, если элемент присутствует в массиве, и false в противном случае (если есть повторения заданного элемента в массиве, то на задачу это никак не влияет). Результат вызова функции отобразите в консоле
+    первое действие - преобразовать каждый элемент, в переданном массиве, в строку, результат должен сохраняться в новом массиве (то есть не мутировать входной массив)
+    вызывать функцию, которая была передана в параметрах (функция callback будет принимать в качестве параметра преобразованный на первом шаге массив)
+    возвращать то, что вернула функция callback после её вызова
 
-```JS
-code/homework/index.js
+    Чтобы показать пример использования функции arrayProcessor вам нужно:
+
+    создать ещё две функции (требования к функциям см. в пункте 3)
+    вызвать arrayProcessor с каждой из функций по очереди
+    каждый из 2-х результатов вывести в консоль
+
+    Требования к функциям callback
+
+    первая функция должна преобразовывать каждый элемент массива в верхний регист и возвращать новый массив с преобразованными элементами
+    вторая функция должна возвращать сумму длин всех строк
+
+
+```jscode/homework/index.js
+
 
 // Задача 1
-for (let i = 1; i <= 20; i++) {
-if (i % 2 === 1) {
-continue;
-}
-console.log(i);
-}
-
-//Задача 2
-// 1 способ
-// let array = [2, 4, 6, 8, 10];
-// for (let i = 0; i < array.length; i++) {
-//   let arrayItem = array[i];
-//   console.log((arrayItem *= 2));
+// Напишите функцию, которая принимает два числа и возвращает большее значение. 
+//Вызов функции присвоить переменной и отобразить результат(переменную) в консоле
+       // 1 вариант
+// function getBiggerNumber(number1, number2) {
+//   let maxNumber = number1 > number2 ? number1 : number2;
+//   return maxNumber;
 // }
-// console.log(array);
 
-// 2 способ
-let array = [2, 4, 6, 8, 10];
-for (let number of array) {
-number*=2;
-console.log(number);
+       // 2 вариант
+// function getBiggerNumber(number1, number2) {
+//   if(number1 > number2){
+//     return number1
+//   } else if (number1 < number2){
+//     return number2
+//   } else {
+//     return "Значения равны или неверный ввод"
+//   }
+// }
+
+       // 3 вариант
+function getBiggerNumber(number1, number2) {
+  let maxNumber =
+    number1 > number2
+      ? number1
+      : number1 < number2
+      ? number2
+      : "Значения равны или неверный ввод";
+  return maxNumber;
 }
-console.log(array);
 
-//Задача 3
-let numbersArray = [10, 15, 30, 25, 30];
-let sum = 0;
+let maxNumber = getBiggerNumber(-10, 6);
+console.log(maxNumber);
 
-for (let i = 0; i < numbersArray.length; i++) {
-sum += numbersArray[i];
+         //4 вариант - Math.max(2,3)
+
+
+
+// Задача 2
+// Напишите функцию, которая принимает строку и число n, а затем возвращает первые n символов строки.
+// Для отображения результа работы функции, вызовите её три раза с различными параметрами,
+//  результат каждого вызова присвойте отдельной переменной и выведите переменные в консоль
+function getSubstring(oldString, n) {
+  return oldString.substring(0, n);
 }
 
-let result = sum / numbersArray.length;
-console.log(result);
+// let newSubstring1 = getSubstring("Hello", 2);
+// let newSubstring2 = getSubstring("Hello", 1);
+let newSubstring3 = getSubstring("Hello", 10);
+let lengthNewSubstring3 = newSubstring3.length;
+
+console.log(newSubstring3);
+console.log(lengthNewSubstring3);
+
+// Задача 3
+// Напишите функцию, которая принимает массив и элемент, а затем возвращает true, если элемент присутствует в массиве,
+// и false в противном случае (если есть повторения заданного элемента в массиве, то на задачу это никак не влияет).
+// Результат вызова функции отобразите в консоле
+
+       // Вариант 1
+// function searchElement(customArray, searchElement) {
+//   for (let i = 0; i < customArray.length; i++) {
+//     if (customArray[i] === searchElement) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+      // Вариант 2
+function searchElement(customArray, searchElement) {
+  return customArray.indexOf(searchElement) !== -1;
+}
+
+console.log(searchElement(["a", "b", "c"], "1"));
 ```
 
-```JS
-code/lesson/index.js
+```html
+code/lesson/dom/index.html
 
-// Циклы while и do...while
-let i = 1;
-while (i < 5) {
-console.log(i);
-i++;
-}
-
-//---
-
-let secretNumber;
-do {
-secretNumber = Math.round(Math.random() * 10);
-console.log(secretNumber);
-} while (secretNumber !== 5);
-console.log("Found secret number!");
-
-//---
-
-let number = 2;
-let number1 = ++number;
-console.log(number1);
-console.log(number);
-
-// // Методы строк
-let stringExample = "PleAse select Your aGe";
-console.log(stringExample.length);
-
-//---
-
-let upperString = stringExample.toUpperCase();
-console.log(upperString);
-console.log(stringExample);
-
-//---
-
-let lowerString = stringExample.toLowerCase();
-console.log(lowerString);
-console.log(stringExample);
-
-//---
-
-let subStr = stringExample.substring(19);
-console.log(subStr);
-
-//---
-
-let indexLetter = stringExample.indexOf("s");
-console.log(indexLetter);
-
-//---
-
-let strArray = stringExample.split(" ", 2);
-console.log(strArray);
-console.log(stringExample);
-
-// Функции
-function isEven(number) {
-let isEvenNum = number % 2 === 0;
-//  alert(isEvenNum);
-// return isEvenNum;
-}
-console.log(isEven(487));
-let isNumberEven = isEven(4);
-console.log(isNumberEven);
-
-// Область видимости
-let age = 18;
-if (age >= 18) {
-var messageAccess = "Access";
-} else {
-var messageFailure = "Failure";
-console.log(messageFailure);
-}
-console.log(messageAccess);
-
-//---
-
-function showMessage() {
-var message = "Hi";
-}
-
-showMessage();
-// console.log(message); //здесь будет ошибка
-
-//hoisting
-console.log(z);
-
-let x = 12;
-const y = 20;
-var z = 3;
-```
-
-```HTML
-code/lesson/index.html
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 13</title>
+    <title>Lesson 14</title>
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    Теперь здесь есть js
-    <script src="./index.js"></script>
+    <div class="main-container">
+      <h1 class="title">Main title</h1>
+      <div id="container">
+        <h2 class="title">User Card</h2>
+        <ul class="list">
+          <li>23</li>
+          <li>Male</li>
+          <li>Project manager</li>
+        </ul>
+        <input name="userName">
+      </div>
+    </div>
   </body>
 </html>
+```
+
+```js
+code/lesson/dom/index.js
+
+//Селекторы
+const containerElement = document.getElementById("container");
+console.log(containerElement);
+
+const listElements = document.getElementsByTagName("li");
+console.log(listElements);
+
+const titleElements = document.getElementsByClassName("title");
+console.log(titleElements);
+
+const searchElement = document.getElementsByName("userName");
+console.log(searchElement);
+
+const list = document.querySelector("ul");
+console.log(list);
+
+const titles = document.querySelectorAll(".title");
+console.log(titles);
+
+const title = document.querySelector(".title");
+console.log(title);
+
+const listItems = document.querySelectorAll("li");
+console.log(listItems);
+
+const listItem = document.querySelector("li");
+console.log(listItem);
+```
+
+```css
+code/lesson/dom/styles.css
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  margin: 30px;
+  background-color: aquamarine;
+  font-size: 26px;
+}
+```
+
+```js
+code/lesson/functions/index.js
+
+// Function hoisting
+
+// console.log(add(2, 3));
+// console.log(divide(2, 3));
+
+function add(number1, number2) {
+  return number1 + number2;
+}
+
+let divide = function (number1 = 4, number2 = 5) {
+  return number1 / number2;
+};
+
+console.log(divide());
+
+//Стрелочные функции
+let getNumber = (n) => {
+  //  return n * 10;
+  console.log(n * 30);
+};
+
+getNumber(30);
+
+//Функции в качестве параметра
+let performOperation = (number1, number2, operation) => {
+  let resultOperation = operation(number1, number2);
+  return resultOperation + 2;
+};
+
+let expoResult = (num1, num2) => num1 * num2;
+
+console.log(performOperation(3, 7, expoResult));
+console.log(performOperation(4, 3, (num1, num2) => num1 - num2));
 ```
