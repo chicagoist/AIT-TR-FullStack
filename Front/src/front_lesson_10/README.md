@@ -39,7 +39,7 @@ _**Задача 3**_
 ```html
 code/homework/index.html
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +117,7 @@ nav {
 ```html
 code/lesson/index.html
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />

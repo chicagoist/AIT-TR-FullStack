@@ -7,13 +7,15 @@
 
 JS: Function types, DOM
 
-**Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_14/JS_Function_types_DOM.pdf)**
+**Ссылка на
+презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_14/JS_Function_types_DOM.pdf)**
 
 **Homework**
 
 Задание
 
-Необходимо создать функцию с названием arrayProcessor, которая будет принимать два параметра, первый параметр - массив, второй параметр - функция callback
+Необходимо создать функцию с названием arrayProcessor, которая будет принимать два параметра, первый параметр - массив,
+второй параметр - функция callback
 
 Требования:
 
@@ -117,7 +119,7 @@ console.log(searchElement(["a", "b", "c"], "1"));
 ```html
 code/lesson/dom/index.html
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

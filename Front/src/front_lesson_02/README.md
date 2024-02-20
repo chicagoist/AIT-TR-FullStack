@@ -17,7 +17,7 @@ pdf-презентацию: [HTML core](https://github.com/ait-tr/cohort37.1/blo
 ```html
 ``./code/homework/index.html
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Homework_01</title>
@@ -119,7 +119,7 @@ pdf-презентацию: [HTML core](https://github.com/ait-tr/cohort37.1/blo
 ```html
 ./code/lesson/index.html
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" type="text/css" />

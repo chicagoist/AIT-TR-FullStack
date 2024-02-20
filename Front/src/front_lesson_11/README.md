@@ -6,7 +6,8 @@
 
 **_JS: Operators_**
 
-Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_11/JS_Operators.pdf)
+Ссылка на
+презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_11/JS_Operators.pdf)
 
 **Homework**
 
@@ -51,9 +52,9 @@ console.log(currentYear);
 ```
 
 ```JS
-code/lesson/index.js
+code / lesson / index.js
 
-            // Функции взаимодействия с пользователем
+// Функции взаимодействия с пользователем
 // alert("Вы на странице");
 // let alertResult = alert("Вы на странице");
 // console.log(alertResult);
@@ -66,7 +67,7 @@ code/lesson/index.js
 
 // console.log(prompt("Введите свой возраст", 100));
 
-            // Математические операторы
+// Математические операторы
 // Сложение
 // let number1 = 30;
 // let number2 = 20;
@@ -104,7 +105,7 @@ code/lesson/index.js
 // let result = number1 ** number2;
 // console.log(result);
 
-          // Приведение типов
+// Приведение типов
 let string1 = "Hello";
 let string2 = "Bob";
 let result = string1 + " " + string2;
@@ -129,13 +130,13 @@ let newYear = surname / addYear;
 
 // console.log(Boolean(surname));
 
-          // Инкремент и декремент
+// Инкремент и декремент
 let counter = 4;
 // counter++;
 counter--;
 // console.log(counter);
 
-          // Операторы сравнения
+// Операторы сравнения
 console.log(undefined > 5);
 console.log(70 < false);
 console.log(1 <= true);
@@ -148,7 +149,7 @@ console.log(num1 === num2);
 console.log(num1 != num2);
 console.log(num1 !== num2);
 
-          // Условный оператор
+// Условный оператор
 let userAge = prompt("Enter your age");
 
 if (userAge > 18) {

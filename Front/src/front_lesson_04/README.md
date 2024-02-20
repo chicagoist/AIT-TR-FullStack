@@ -47,7 +47,7 @@ _Сверстать страницу, в которой будет находи�
 
 ```html
 ./code/homework/index.html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
@@ -153,7 +153,7 @@ body {
 
 ```html
 ./code/lesson/index.html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />

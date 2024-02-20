@@ -1,20 +1,20 @@
 //Задача 1
 // const findMax = (number1, number2) => number1 > number2 ? number1 : number2 // однострочник
-function findMax(number1, number2) {
+function findMax (number1, number2) {
   return number1 > number2 ? number1 : number2;
 }
 
-let result = findMax(-3, -1);
-console.log(result);
+let results = findMax(-3, -1);
+console.log(results);
 
 // Задача 2
-function findSubstring(string = "", number = 0) {
+function findSubstring (string = '', number = 0) {
   return string.substring(0, number);
 }
 
 console.log(string); // а вот это не печатает, хотя и переменная string объявлена, как var
 
-var string = "Hello, JS!";
+var string = 'Hello, JS!';
 for (let i = 0; i < 3; i++) {
   let indexOfLoop = Math.round(Math.random() * (string.length + 1));
   let temp = findSubstring(string, indexOfLoop);
@@ -22,7 +22,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 // Задача 3
-function isExistsElementInArray(array = [], element) {
+function isExistsElementInArray (array = [], element) {
   //return !!array[element]; // как вариант вместо if-else
   if (array[element]) {
     return true;

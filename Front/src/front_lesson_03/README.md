@@ -51,7 +51,7 @@
 
 ```html
 ./code/homework/index.html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
@@ -181,7 +181,7 @@ footer {
 
 ```html
 ./code/lesson/index.html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
