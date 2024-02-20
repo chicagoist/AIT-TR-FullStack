@@ -32,17 +32,17 @@
 
 ./code/styles.css
 
-* { box-sizing: border-box; }
+- { box-sizing: border-box; }
 
 html, body { height: 100%; margin: 0; padding: 0; font-family: monospace; }
 
 h1, h2, h3, h4, h5, h6, p, ul, li { margin: 0; padding: 0; }
 
-.overflow-example { display: flex; flex-direction: column; justify-items: center; align-items: center; width: 40%; /*
-height: 400px; */ background-color: rgb(163, 202, 202); border: 2px solid rgb(26, 55, 71); font-size: 24px; padding:
-20px; margin: 30px; /* overflow: auto; */ }
+.overflow-example { display: flex; flex-direction: column; justify-items: center; align-items: center; width: 40%; /_
+height: 400px; _/ background-color: rgb(163, 202, 202); border: 2px solid rgb(26, 55, 71); font-size: 24px; padding:
+20px; margin: 30px; /_ overflow: auto; _/ }
 
-/* Работа с псевдоклассами */ .overflow-example:hover { color: white; background-color: rgb(19, 49, 49); border: 2px
+/_ Работа с псевдоклассами _/ .overflow-example:hover { color: white; background-color: rgb(19, 49, 49); border: 2px
 solid rgb(164, 182, 200); box-shadow: 4px 10px 10px rgb(23, 60, 38); }
 
 .active-example { width: 100%; height: 50px; font-size: 30px; padding: 10px; margin: 20px; color: rgb(27, 23, 48);
@@ -57,7 +57,7 @@ font-size: 32px; color: rgb(67, 29, 80); }
 
 .focus-example:focus-visible { outline: none; }
 
-/* Работа с псевдоэлементами */ .element-pseudo::first-letter { color: rgb(54, 54, 198); font-size: 34px; font-weight:
+/_ Работа с псевдоэлементами _/ .element-pseudo::first-letter { color: rgb(54, 54, 198); font-size: 34px; font-weight:
 bold; }
 
 .element-pseudo::first-line { color: brown; }
@@ -66,11 +66,10 @@ p::selection { background-color: rgb(0, 255, 26); }
 
 .focus-example::placeholder { color: rgb(159, 226, 43); }
 
-/* Создание всплывающего окна */ .block-hover { position: relative; width: 400px; margin: 20px; padding: 20px;
+/_ Создание всплывающего окна _/ .block-hover { position: relative; width: 400px; margin: 20px; padding: 20px;
 font-size: 26px; color: white; background-color: rgb(32, 85, 67); }
 
 .popup { display: none; position: absolute; left: 0; top: 30; width: 200px; padding: 20px; font-size: 20px; color: rgb(
 14, 44, 44); border: 2px solid rgb(14, 44, 44); background-color: aliceblue; border-radius: 6px; }
 
 .block-hover:hover .popup { display: block; }
-

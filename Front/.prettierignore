@@ -7,3 +7,5 @@ coverage
 **/.hg
 **/node_modules
 **/.idea
+**/out
+**/.out

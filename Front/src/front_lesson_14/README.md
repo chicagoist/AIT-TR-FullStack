@@ -1,6 +1,3 @@
-
-
-
 Задачи на урок:
 
     Function types
@@ -15,7 +12,6 @@ JS: Function types, DOM
 **Homework**
 
 Задание
-
 
 Необходимо создать функцию с названием arrayProcessor, которая будет принимать два параметра, первый параметр - массив, второй параметр - функция callback
 
@@ -38,12 +34,11 @@ JS: Function types, DOM
     первая функция должна преобразовывать каждый элемент массива в верхний регист и возвращать новый массив с преобразованными элементами
     вторая функция должна возвращать сумму длин всех строк
 
-
 ```jscode/homework/index.js
 
 
 // Задача 1
-// Напишите функцию, которая принимает два числа и возвращает большее значение. 
+// Напишите функцию, которая принимает два числа и возвращает большее значение.
 //Вызов функции присвоить переменной и отобразить результат(переменную) в консоле
        // 1 вариант
 // function getBiggerNumber(number1, number2) {
@@ -122,8 +117,7 @@ console.log(searchElement(["a", "b", "c"], "1"));
 ```html
 code/lesson/dom/index.html
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -142,7 +136,7 @@ code/lesson/dom/index.html
           <li>Male</li>
           <li>Project manager</li>
         </ul>
-        <input name="userName">
+        <input name="userName" />
       </div>
     </div>
   </body>
@@ -150,7 +144,7 @@ code/lesson/dom/index.html
 ```
 
 ```js
-code/lesson/dom/index.js
+code / lesson / dom / index.js;
 
 //Селекторы
 const containerElement = document.getElementById("container");
@@ -182,9 +176,7 @@ console.log(listItem);
 ```
 
 ```css
-code/lesson/dom/styles.css
-
-* {
+code/lesson/dom/styles.css * {
   box-sizing: border-box;
 }
 
@@ -218,7 +210,7 @@ html {
 ```
 
 ```js
-code/lesson/functions/index.js
+code / lesson / functions / index.js;
 
 // Function hoisting
 

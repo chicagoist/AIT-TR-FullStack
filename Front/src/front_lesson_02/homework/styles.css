@@ -1,94 +1,94 @@
 a.rounded-corners {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .header_logo {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body styling */
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 /* Header styling */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 /* Main section styling */
 main {
-    padding: 20px;
-    margin-bottom: 100px;
+  padding: 20px;
+  margin-bottom: 100px;
 }
 
 .main-sections {
-    margin-bottom: 10px;
-    background-color: #f5f5f5;
-    padding: 15px;
-    border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .copyright-block {
-    margin-top: 10px;
-    background-color: #bbff00;
-    padding: 10px;
-    border-radius: 5px;
-    color: #333;
+  margin-top: 10px;
+  background-color: #bbff00;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
 }
 
 /* Additional styles */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 span {
-    font-style: italic;
+  font-style: italic;
 }
 
 .image-thumbnail {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
 }

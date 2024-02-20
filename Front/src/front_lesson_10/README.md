@@ -39,7 +39,7 @@ _**Задача 3**_
 ```html
 code/homework/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -63,17 +63,15 @@ code/homework/index.html
 ```
 
 ```css
-code/homework/styles.css
-
-* {
+code/homework/styles.css * {
   box-sizing: border-box;
-  }
+}
 
 html,
 body {
-height: 100%;
-margin: 0;
-padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -85,41 +83,41 @@ h6,
 p,
 ul,
 li {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .page-container {
-display: flex;
-flex-direction: column;
-width: 100%;
-font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 26px;
 }
 
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-background-color: rgb(127, 187, 167);
-padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(127, 187, 167);
+  padding: 20px 40px;
 }
 
 .title {
-margin-right: 20px;
+  margin-right: 20px;
 }
 
 nav {
-display: flex;
-gap: 20px;
-align-self: flex-end;
+  display: flex;
+  gap: 20px;
+  align-self: flex-end;
 }
 ```
 
 ```html
 code/lesson/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
@@ -145,7 +143,7 @@ code/lesson/index.html
 ```
 
 ```js
-code/lesson/index.js
+code / lesson / index.js;
 
 // console.log("Внешний файл");
 
@@ -180,17 +178,15 @@ console.log(typeof userName);
 ```
 
 ```css
-code/lesson/styles.css
-
-* {
+code/lesson/styles.css * {
   box-sizing: border-box;
-  }
+}
 
 html,
 body {
-height: 100%;
-margin: 0;
-padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -202,21 +198,21 @@ h6,
 p,
 ul,
 li {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-display: flex;
-width: 100%;
-height: 100%;
-font-size: 30px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
 }
 
 .card {
-width: 40%;
-height: 40%;
-background-color: rgb(127, 175, 197);
-border: 2px solid rgb(59, 93, 100);
+  width: 40%;
+  height: 40%;
+  background-color: rgb(127, 175, 197);
+  border: 2px solid rgb(59, 93, 100);
 }
 ```
