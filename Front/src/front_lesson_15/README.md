@@ -9,7 +9,6 @@
 
 **Homework**
 
-
 Нужно создать веб-страницу, на которой будут расположены три кнопки.
 
 Действия, которые должны происходить при нажатии на кнопки:
@@ -18,9 +17,8 @@
     Вторая кнопка меняет название первой кнопки
     Третья кнопка добавляет заголовок на страницу
 
-
 ```js
-code/homework/index.js
+code / homework / index.js;
 
 // Необходимо создать функцию с названием arrayProcessor, которая будет принимать два параметра, первый параметр - массив, второй параметр - функция callback
 
@@ -41,36 +39,36 @@ code/homework/index.js
 // вторая функция должна возвращать сумму длин всех строк в массиве
 
 let arrayProcessor = (inputArray, operateOnArray) => {
-let stringArray = []; //1
-for (let i = 0; i < inputArray.length; i++) {
-stringArray.push(String(inputArray[i]));
-}
-let resultOperationOnArray = operateOnArray(stringArray); //2
-return resultOperationOnArray; //3
+  let stringArray = []; //1
+  for (let i = 0; i < inputArray.length; i++) {
+    stringArray.push(String(inputArray[i]));
+  }
+  let resultOperationOnArray = operateOnArray(stringArray); //2
+  return resultOperationOnArray; //3
 };
 
 let function1 = (initialArray) => {
-let upperCaseStringArray = [];
-for (let i = 0; i < initialArray.length; i++) {
-upperCaseStringArray.push(initialArray[i].toUpperCase());
-}
-return upperCaseStringArray;
+  let upperCaseStringArray = [];
+  for (let i = 0; i < initialArray.length; i++) {
+    upperCaseStringArray.push(initialArray[i].toUpperCase());
+  }
+  return upperCaseStringArray;
 };
 
 let function2 = (initialArray) => {
-let sumStrings = 0;
-for (let i = 0; i < initialArray.length; i++) {
-sumStrings += initialArray[i].length;
-// console.log(sumStrings);
-}
-//for(let elementArray of initialArray){
-//   ...
-// sumStrings += elementArray.length;
-// }
-return sumStrings;
+  let sumStrings = 0;
+  for (let i = 0; i < initialArray.length; i++) {
+    sumStrings += initialArray[i].length;
+    // console.log(sumStrings);
+  }
+  //for(let elementArray of initialArray){
+  //   ...
+  // sumStrings += elementArray.length;
+  // }
+  return sumStrings;
 };
 
-let userArray= ["Tom", "Bob", "Bill"];
+let userArray = ["Tom", "Bob", "Bill"];
 
 // console.log(arrayProcessor([1, true, "Hi", null], function1));
 // console.log(arrayProcessor(["Red", "Blue", "Green "], function2));
@@ -102,22 +100,21 @@ code/lesson/index.html
           <li>Project manager</li>
         </ul>
         <a href="">Info</a>
-        <input id='search' name="search" placeholder="search" />
+        <input id="search" name="search" placeholder="search" />
         <button type="button" class="card-button">Hide card</button>
         <form id="main-form">
-          <input id='name-field' name="userName" placeholder="Name" />
+          <input id="name-field" name="userName" placeholder="Name" />
           <input name="password" placeholder="Password" />
           <button class="getData" type="button">get data</button>
-        </form> 
+        </form>
       </div>
     </div>
   </body>
 </html>
 ```
 
-
 ```js
-code/lesson/index.js
+code / lesson / index.js;
 
 //Add element
 //1 step
@@ -158,11 +155,11 @@ let showCardButton = document.querySelector(".show-button");
 let card = document.querySelector("#container");
 
 let hideCard = () => {
-card.style.display = "none";
+  card.style.display = "none";
 };
 
 let showCard = () => {
-card.style.display = "flex";
+  card.style.display = "flex";
 };
 
 hideCardButton.addEventListener("click", hideCard);
@@ -177,17 +174,17 @@ let searchField = document.querySelector("#search");
 // };
 
 searchField.addEventListener("change", (eventT) => {
-console.log(eventT.target.value);
-alert(eventT.target.value);
+  console.log(eventT.target.value);
+  alert(eventT.target.value);
 });
 
 //preventDefault
 let link = document.querySelector("a");
 
 let changeDefault = (event) => {
-event.preventDefault();
-//любые действия
-alert("User not found");
+  event.preventDefault();
+  //любые действия
+  alert("User not found");
 };
 
 link.addEventListener("click", changeDefault);
@@ -196,13 +193,13 @@ link.addEventListener("click", changeDefault);
 let getDataButton = document.querySelector(".getData");
 
 let getDataFunction = () => {
-const form = document.querySelector("#main-form");
-console.log(form);
-let nameField = form.elements["userName"].value;
-console.log(nameField);
-let passwordField = form.password.value;
-console.log(passwordField);
-console.log(nameField, passwordField);
+  const form = document.querySelector("#main-form");
+  console.log(form);
+  let nameField = form.elements["userName"].value;
+  console.log(nameField);
+  let passwordField = form.password.value;
+  console.log(passwordField);
+  console.log(nameField, passwordField);
 };
 
 getDataButton.addEventListener("click", getDataFunction);
@@ -214,39 +211,36 @@ getDataButton.addEventListener("click", getDataFunction);
 сломался код выше в строке 47 */
 ```
 
-
 ```css
-code/lesson/styles.css
-
-* {
+code/lesson/styles.css * {
   box-sizing: border-box;
-  }
+}
 
 body,
 html {
-height: 100%;
-margin: 0;
-padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 #container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 500px;
-height: 600px;
-margin: 30px;
-background-color: aquamarine;
-font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  margin: 30px;
+  background-color: aquamarine;
+  font-size: 26px;
 }
 ```
