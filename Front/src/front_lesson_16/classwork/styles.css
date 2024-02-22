@@ -1,89 +1,64 @@
+/*
+Использовал сервис https://purifycss.online/
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body,
 html {
   height: 100%;
 }
-
-body,
-html {
-  height: 100%;
-}
-
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-
-header,
-footer {
+footer,
+header {
   background-color: #333;
-  color: white;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
-
 .wrap {
   max-width: 1200px;
   margin: auto;
 }
-
 .header_top {
   align-items: center;
 }
-
 nav {
   margin: 10px;
 }
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-right: 20px;
 }
-
 main {
   display: grid;
   grid-template-columns: [one]1fr [two]1fr;
   gap: 20px;
 }
-
-.form-section-one {
-  grid-column: 1/2;
-}
-
-#contact-form-two {
-  grid-column: 2/3;
-}
-
-.form-section-one,
-aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#contact-form-two {
-  background-color: #c6dc88;
-}
-
+.user-card,
 form {
   background-color: #9fd1eb;
 }
-
-form,
-#contact-form-two {
+.user-card,
+form {
   max-width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -93,31 +68,22 @@ form,
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.form-group {
-  margin-bottom: 20px;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
 }
-
-input[type="text"],
-input[type="tel"],
 input[type="email"],
-select,
-textarea {
+input[type="tel"],
+input[type="text"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
-
 input[type="checkbox"] {
   margin-right: 5px;
 }
-
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -126,36 +92,59 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-
 footer {
   background-color: #333;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 10px;
   bottom: 0;
   width: 100%;
 }
-
 .copyright-block {
   margin-top: 10px;
-  background-color: #bbff00;
+  background-color: #bf0;
   padding: 10px;
   border-radius: 5px;
   color: #333;
 }
-
 .header_logo {
   margin-bottom: 30px;
 }
-
-header,
 footer,
+header,
 main {
   display: flex;
   justify-content: unset;
 }
-
 img {
   max-width: 100%;
   height: auto;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+.card {
+  display: flex;
+  width: 300px;
+  margin: 10px;
+  background: #cbdc5d;
+  padding: 30px;
+  border: 4px solid #58d358;
+  border-radius: 6px;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
