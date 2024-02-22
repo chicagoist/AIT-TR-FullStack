@@ -2,7 +2,7 @@ let submitButton = document.querySelector(".submit-button");
 let userForm = document.querySelector("#user-form");
 let userCard = document.querySelector(".user-card");
 
-  let sendData = () => {
+let sendData = () => {
   let name = userForm.name.value;
   let surName = userForm.surname.value;
   let email = userForm.email.value;
