@@ -26,14 +26,14 @@ let actionButton1 = () => {
 let actionButton2 = () => {
   let nameChangeOfButton1 = document.querySelector(".card-button1");
   isButtonNameChanged = !isButtonNameChanged;
-  nameChangeOfButton1.innerHTML = isButtonNameChanged ? "ANOTHER" : "BUTTON 1";
+  nameChangeOfButton1.textContent = isButtonNameChanged ? "ANOTHER" : "BUTTON 1";
 };
 
 // this function add the new title to show and changed back it when clicked again
 let actionButton3 = () => {
   let addTitleText = document.querySelector(".main-title");
   isTitleAdded = !isTitleAdded;
-  addTitleText.innerHTML = isTitleAdded ? "My new Title" : "Main title";
+  addTitleText.textContent = isTitleAdded ? "My new Title" : "Main title";
 };
 
 // Немного отсебятины, можно не проверять.
