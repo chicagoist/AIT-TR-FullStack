@@ -18,7 +18,7 @@ let sendData = () => {
     `; // готово для вставки
 
     userForm.style.display = "none";
-    userCard.style.display = "grid";
+    userCard.style.display = "block";
   } else {
     alert("Fill out all form fields");
   }
