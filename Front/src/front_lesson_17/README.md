@@ -1,4 +1,3 @@
-
 **Задачи на урок:**
 
     Создание объекта
@@ -9,7 +8,6 @@ _**JS: Object**_
 Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_17/JS_Object.pdf)
 
 **Homework**
-
 
     Предположим вы получили объект с данными (создайте переменную, в которой будет храниться объект) - spaceship, в котором находятся характеристики космического корабля, такие как:
     name
@@ -60,7 +58,6 @@ code/homework/index.html
 </html>
 ```
 
-
 ```JS
 code/homework/index.js
 
@@ -92,9 +89,7 @@ form.addEventListener("submit", sendData);
 ```
 
 ```css
-code/homework/styles.css
-
-* {
+code/homework/styles.css * {
   box-sizing: border-box;
 }
 
