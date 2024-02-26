@@ -10,7 +10,7 @@ let spaceship = {
 let spaceshipeInfo = document.querySelector(".spaceship-info");
 
 // Variable names obtained from spaceship's Object
-let nameStarship = spaceship.name; // name - ключевое слово! переименовываем в nameStarship
+let nameStarship = spaceship.name; // name - ключевое слово! переименовываем в  nameStarship
 let manufacturer = spaceship.manufacturer;
 let crew = spaceship.crew;
 let maxSpeed = spaceship["max speed"];
