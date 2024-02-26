@@ -1,36 +1,39 @@
-// Object
-let spaceship = {
-  name: "Falcon Heavy",
-  manufacturer: "Space Exploration Technologies Corporation",
-  crew: 0,
-  "max speed": "1050 km/h",
-};
+// Array
+let priceArray = [100, 400, 900, 300, 500];
 
-// To fill the .spaceship-info block
-let spaceshipeInfo = document.querySelector(".spaceship-info");
+// DOM element
+const pageContainer = document.querySelector(".homework18");
 
-// Variable names obtained from spaceship's Object
-let name = spaceship.name;
-let manufacturer = spaceship.manufacturer;
-let crew = spaceship.crew;
-let maxSpeed = spaceship["max speed"];
+// Elements of button
+let showFilteredPrice = document.querySelector(".filter-for-price");
 
-// To fill in HTML
-spaceshipeInfo.innerHTML = `
-    <p class="name">Name: ${name}</p>
-    <p class="manufacturer"><strong>Manufacturer:</strong> <strong>${manufacturer}</strong></p>
-    <p class="crew">Crew: ${crew}</p>
-    <p class="maxSpeed">Max Speed: ${maxSpeed}</p>
-    `;
+// From your homework 17
+const elements = priceArray.map((item) => {
+  const divEl18 = document.createElement("div");
+  divEl18.textContent = item;
+  return divEl18;
+});
 
-let isManufacturerHidden = false;
+// Fill to index.html
+elements.forEach((element) => pageContainer.append(element));
 
-// Elements of classes
-let hideManufacturerButton = document.querySelector(".hide-manufacturer");
-let manufacturerSpan = document.querySelector(".manufacturer");
+let isPriceFiltered = false;
 
-// Action to button
-hideManufacturerButton.addEventListener("click", () => {
-  isManufacturerHidden = !isManufacturerHidden;
-  manufacturerSpan.style.display = isManufacturerHidden ? "none" : "block";
+// Action for button
+showFilteredPrice.addEventListener("click", () => {
+  isPriceFiltered = !isPriceFiltered;
+
+  elements.forEach((element) => {
+    if (isPriceFiltered) {
+      if (element.textContent < 450) {
+        element.style.display = "none"; // hide all divs with price < 450
+      } else {
+        element.style.display = "block"; // show all divs with price > 450
+        element.style.fontWeight = "bold"; // show the price wit bold teext
+      }
+    } else {
+      element.style.display = "block"; // reset to start
+      element.style.fontWeight = "normal"; // normal text again
+    }
+  });
 });

@@ -7,7 +7,7 @@ let spaceship = {
 };
 
 // To fill the .spaceship-info block
-let spaceshipeInfo = document.querySelector(".spaceship-info");
+let spaceshipeInfo = document.querySelector(".homework18");
 
 // Variable names obtained from spaceship's Object
 let nameStarship = spaceship.name; // name - ключевое слово! переименовываем в  nameStarship
