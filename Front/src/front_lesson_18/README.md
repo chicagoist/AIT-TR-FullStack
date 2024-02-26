@@ -1,4 +1,3 @@
-
 **Задачи на урок:**
 
     Деструктуризация
@@ -10,7 +9,6 @@
 Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_18/JS_Array_methods.pdf)
 
 Homework
-
 
     Вы получили массив с ценами на товар (создайте переменную, в которой будет храниться массив). Значения массива [100, 400, 900, 300, 500].
     Необходимо отобразить каждый из элементов массива на странице в отдельном блоке
@@ -38,15 +36,12 @@ code/homework/index.html
         <p id="spaceship-manufacturer"></p>
         <p id="spaceship-crew"></p>
         <p id="spaceship-max-speed"></p>
-        <button class="hide-manufacturer-button" type="button">
-          Hide Manufacturer
-        </button>
+        <button class="hide-manufacturer-button" type="button">Hide Manufacturer</button>
       </div>
     </div>
   </body>
 </html>
 ```
-
 
 ```JS
 code/homework/index.js
@@ -106,11 +101,8 @@ const hideManufacturer = () => {
 hideManufacturerButton.addEventListener("click", hideManufacturer);
 ```
 
-
 ```css
-code/homework/styles.css
-
-* {
+code/homework/styles.css * {
   box-sizing: border-box;
 }
 
@@ -184,7 +176,6 @@ button:hover {
 }
 ```
 
-
 ```html
 code/lesson/index.html
 
@@ -202,7 +193,6 @@ code/lesson/index.html
   </body>
 </html>
 ```
-
 
 ```JS
 code/lesson/index.js
