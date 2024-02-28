@@ -7,7 +7,7 @@ const pageContainer = document.querySelector(".homework18");
 // Elements of button
 let showFilteredPrice = document.querySelector(".filter-for-price");
 
-// From your homework 17
+// From your classwork 17
 const elements = priceArray.map((item) => {
   const divEl18 = document.createElement("div");
   divEl18.textContent = item;
