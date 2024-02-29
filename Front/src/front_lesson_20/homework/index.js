@@ -18,7 +18,7 @@ let warrior = {
 
   attack() {
     const index = Math.floor(Math.random() * this.weapon.length); // choosing a weapon to attack
-    console.log(`Атакую с помощью ${this.weapon[index]}`);
+    console.log(`Атакую с помощью ${this.weapon[index]} !!!`);
   },
   __proto__: character,
 };
@@ -38,5 +38,6 @@ let wizard = {
 
 character.introduce();
 warrior.introduce();
+warrior.attack();
 wizard.introduce();
-console.log(wizard.castSpell());
+wizard.castSpell();
