@@ -1,217 +1,266 @@
 **Задачи на урок:**
 
-    Создание классов
-    Наследование классов
-    Приватные поля и методы
-    Геттеры и сеттеры
+    setTimeout
+    setInterval
+    Ассинхронность
+    Callbacks
 
-_**JS: class, inheritance**_
+**_JS: Timers_**
 
-Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_21/JS_class_inheritance.pdf)
+Ссылка на презентацию: [презентация](https://github.com/ait-tr/cohort37.1/blob/main/front_end/lesson_22/JS_Timers.pdf)
 
 **Homework**
 
 
-    Создайте базовый класс Transport, представляющий транспортное средство. У транспортного средства должны быть следующие свойства:
-        make (марка)
-        model (модель)
-        year (год выпуска)
+    Создайте простой таймер на веб-странице, который будет отсчитывать время назад от 60 секунд. При достижении 0 секунд таймер должен остановиться.
+    Стилизуйте его
 
-    Добавьте в класс Transport метод displayMainInfo(), который выводит всю информацию о транспортном средстве в консоль.
-
-    Создайте два подкласса, расширяющих класс Transport:
-
-        Car - представляет автомобиль. Дополнительные свойства:
-            numDoors (количество дверей)
-            isConvertible (является ли кабриолетом)
-
-        Motorcycle - представляет мотоцикл. Дополнительные свойства:
-            numWheels (количество колес)
-            hasSideCar (имеет ли боковую коляску)
-
-    Создайте по два экземпляра для классов Car и Motorcycle
-
-Для демонстрации результатов вызовите метод displayMainInfo() для каждого экземпляра (4 вызова).
+Важно: задание нужно прислать мне в виде архива, в котором будут три файла: index.js, index.html, styles.css
 
 ```js
 code/homework/index.js
 
-// Создать персонажей для игры с помощью прототипного наследования и this
+// - Создайте базовый класс Transport, представляющий транспортное средство. У транспортного средства должны быть следующие свойства:
+// - make (марка)
+// - model (модель)
+// - year (год выпуска)
+// - Добавьте в класс Transport метод displayMainInfo(), который выводит всю информацию о транспортном средстве в консоль.
 
-// Создайте объект character, представляющий следующие характеристики и действие для всех персонажей:
+// - Создайте два подкласса, расширяющих класс Transport:
 
-// свойства name (имя), health (здоровье), level (уровень)
-// метод introduce для character, который выводит в консоль информацию о персонаже, например:
-//"Hello, my name is [name], I am at level [level], and I have [health] health." - на квадратные скобки не обращайте внимание, они для схемы, чтобы указать на переменные значения
+// - Car - представляет автомобиль. Дополнительные свойства:
+//   - numDoors (количество дверей)
+//   - isConvertible (является ли кабриолетом)
 
-// Создайте объект warrior, который будет наследовать свойства и методы от character, также при создании объекта добавьте в него:
-// свойства name (имя), health (здоровье), level (уровень), weapon (оружие)
-// метод attack, который выводит сообщение в консоль о нападении и название оружия (внутри использовать значение из weapon)
+// - Motorcycle - представляет мотоцикл. Дополнительные свойства:
+//   - numWheels (количество колес)
+//   - hasSideCar (имеет ли боковую коляску)
 
-// Создайте объект wizard, наследующий свойства и методы от character, также при создании объекта добавьте в него:
-// свойства name (имя), health (здоровье), level (уровень), spell (заклинание)
-// метод castSpell, который выводит сообщение в консоль о том, как персонаж произносит заклинание (внутри использовать значение из spell).
+// - Создайте по два экземпляра для классов Car и Motorcycle
 
-// Результат должен состоять из следующих действий:
-// вызова метода introduce для каждого из объектов
-// вызова метода attack для объекта warrior
-// вызова метода castSpell для объекта wizard
+// Для демонстрации результатов вызовите метод displayMainInfo() для каждого экземпляра (4 вызова).
 
-const character = {
-  name: "User",
-  health: 100,
-  level: 1,
-  introduce() {
+class Transport {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  displayMainInfo() {
+    console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+  }
+}
+
+class Car extends Transport {
+  constructor(make, model, year, numDoors = 4, isConvertible = false) {
+    super(make, model, year);
+    this.numDoors = numDoors;
+    this.isConvertible = isConvertible;
+  }
+
+  // displayMainInfo() {
+  //   // super.displayMainInfo();
+  //   console.log(
+  //     `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}, Number of Doors: ${this.numDoors}, Convertible car: ${this.isConvertible}`
+  //   );
+  // }
+  displayAdditionalInfo() {
     console.log(
-      `Hello, my name is ${this.name}, I am at level ${this.level}, and I have ${this.health} health.`
+      `Number of Doors: ${this.numDoors}, Convertible car: ${this.isConvertible}`
     );
-  },
-};
+  }
+}
 
-const warrior = {
-  // __proto__: character,
-  name: "Conan",
-  health: 90,
-  level: 10,
-  weapon: "Sword",
-  attack() {
-    console.log(`I'm attacking with ${this.weapon}`);
-  },
-};
-warrior.__proto__ = character;
+class Motorcycle extends Transport {
+  constructor(make, model, year, numWheels, hasSideCar) {
+    super(make, model, year);
+    this.numWheels = numWheels;
+    this.hasSideCar = hasSideCar;
+  }
+}
 
+const toyotaCar = new Car("Toyota", "Camry", 2022, 2, true);
+console.log(toyotaCar);
+const audiCar = new Car("Audi", "A4", 2020, 4, true);
 
-const wizard = {
-  // __proto__: character,
-  name: "Merlin",
-  health: 110,
-  level: 11,
-  spell: "Firestorm",
-  castSpell() {
-    console.log(`I'm using ${this.spell}`);
-  },
-};
+const harleyMotorcycle = new Motorcycle(
+  "Harley-Davidson",
+  "Sportster",
+  2022,
+  2,
+  false
+);
 
-Object.setPrototypeOf(wizard, character);
+const hondaMotorcycle = new Motorcycle("Honda", "VTX 1800", 2002, 2, false);
 
-character.introduce();
-warrior.introduce();
-wizard.introduce();
-
-warrior.attack();
-
-wizard.castSpell();
+toyotaCar.displayMainInfo();
+toyotaCar.displayAdditionalInfo();
+audiCar.displayMainInfo();
+harleyMotorcycle.displayMainInfo();
+hondaMotorcycle.displayMainInfo();
 ```
 
 
 ```js
 code/lesson/index.js
 
-// Создание класса и его экземпляров
-class Wizard {
-  constructor(name, house) {
-    this.name = name;
-    this.house = house;
-
-    // this.introduce = function () {
-    //   console.log(`I'm ${this.name} from ${this.house} house`);
-    // };
-  }
-
-  introduce() {
-    console.log(`I'm ${this.name} from ${this.house} house`);
-  }
-}
-
-const harry = new Wizard("Harry Potter", "Gryffindor"); //экземпляр класса Wizard - объект harry
-harry.introduce();
-harry.introduce = function () {
-  console.log(`My name is ${this.name}`);
+// setTimeout
+const delayedFunction = () => {
+  console.log("Функция выполниться через 3 секунды");
 };
-harry.introduce();
-console.log(harry);
 
-const hermiona = new Wizard("Hermiona Granger", "Gryffindor");
-console.log(hermiona);
-hermiona.introduce();
+setTimeout(delayedFunction, 3000); //3000ms = 3s
 
-// наследование классов
+//
 
-class DarkWizard extends Wizard {
-  constructor(name, house, darkPower) {
-    super(name, house);
-    this.darkPower = darkPower;
-  }
+const greet = (userName, userAge, isAdmin) => {
+  console.log(`Hello ${userName} - ${userAge} - ${isAdmin}`);
+};
 
-  useDarkPower() {
-    console.log(`${this.name} uses dark power: ${this.darkPower}`);
-  }
-}
+setTimeout(greet, 2000, "Ted", 23, true);
 
-const voldemort = new DarkWizard(
-  "Lord Voldemort",
-  "Slytherin",
-  "Avada Kedavra"
-); //экземпляр класса DarkWizard - объект voldemort
+//
 
-console.log(voldemort);
-voldemort.introduce();
-voldemort.useDarkPower();
+console.log("1");
+console.log("2");
+setTimeout(() => {
+  console.log("3");
+}, 0);
+console.log("4");
+setTimeout(() => {
+  console.log("5");
+}, 3000);
+console.log("6");
 
-//приватные свойства и методы
-class WizardPrivate {
-  #privateField;
+//
 
-  constructor(name, house) {
-    this.name = name;
-    this.house = house;
-    this.course = 1;
-    this.#privateField = "Secret";
-  }
+setTimeout(() => {
+  console.log("1");
+}, 3000);
 
-  #privateMethod() {
-    console.log(`This is private method - ${this.#privateField}`);
-  }
+setTimeout(() => {
+  console.log("2");
+}, 3000);
 
-  revealMethod() {
-    console.log(`My secret is ${this.#privateField}`);
-    this.#privateMethod();
-  }
-}
+//
 
-const jinny = new WizardPrivate("Jinny Weasly", "Gryffindor"); //экземпляр класса WizardPrivate - объект jinny
-console.log(jinny);
-console.log(jinny.name);
-// console.log(jinny.#privateField);
-// jinny.#privateMethod();
-jinny.revealMethod();
-console.log(jinny.course);
+const showMessage = (ms) => {
+  const messageTimer = ms / 1000;
 
-//геттеры и сеттеры
-class WizardGetSet {
-  #name;
-  constructor(name, house) {
-    this.#name = name;
-    this.house = house;
-  }
+  const alertMessage = () => {
+    console.log(`Прошло ${messageTimer} секунды`);
+  };
 
-  get name() {
-    return `${this.#name} Weasley`;
-  }
+  setTimeout(alertMessage, ms);
 
-  set name(newName) {
-    if(newName!==''){
-      this.#name = newName;
-    } else {
-      console.log('Enter name')
+  console.log("2");
+};
+
+showMessage(4000);
+
+console.log("1");
+
+//setInterval
+const simpleCounter1 = () => {
+  let count = 1;
+
+  let countFunc = () => {
+    console.log(count);
+    count++;
+
+    if (count > 5) {
+      clearInterval(intervalId);
     }
-  }
-}
+  };
 
-const ron = new WizardGetSet("Ron", "Gryffindor"); //экземпляр класса WizardGetSet - объект ron
-console.log(ron.name);
-ron.name = "";
-console.log(ron.name);
-// ron.house = "Slytherin";
-// console.log(ron.house);
+  const intervalId = setInterval(countFunc, 1000);
+};
+
+simpleCounter1();
+
+//
+
+const simpleCounter2 = () => {
+  let count = 1;
+
+  const intervalId = setInterval(() => {
+    console.log(count);
+    count++;
+  }, 2000);
+
+  console.log(intervalId);
+
+  setTimeout(() => {
+    clearInterval(intervalId);
+    console.log(intervalId);
+  }, 7000);
+};
+
+simpleCounter2();
+
+//callback
+const fetchData = (callback) => {
+  //ассинхронная операция, например, запрос к серверу
+  setTimeout(() => {
+    const data = "error";
+    callback(data);
+  }, 3000);
+};
+
+const processData = (data) => {
+  if (data === "error" || data === "") {
+    console.log("Перезагрузите страницу");
+  } else {
+    console.log(`Обработка данных: ${data}`);
+  }
+};
+
+fetchData(processData);
+
+console.log("Код идет дальше");
+
+// callback hell
+
+const cookBacon = (callback) => {
+  console.log("Cooking bacon...");
+  setTimeout(() => {
+    console.log("Bacon is done!");
+    callback();
+  }, 3000);
+};
+
+const cookEggs = (callback) => {
+  console.log("Cooking eggs...");
+  setTimeout(() => {
+    console.log("Eggs are done!");
+    callback();
+  }, 4000);
+};
+
+const toastBread = (callback) => {
+  console.log("Toasting bread...");
+  setTimeout(() => {
+    console.log("Toast is done!");
+    callback();
+  }, 2000);
+};
+
+const cookMeet = (callback) => {
+  console.log("Cooking meet...");
+  setTimeout(() => {
+    console.log("Meet is done!");
+    callback();
+  }, 4000);
+};
+
+toastBread(() => {
+  cookBacon(() => {
+    cookEggs(() => {
+      cookMeet(() => {
+        console.log("Sandwich is ready");
+      });
+    });
+  });
+});
 ```
