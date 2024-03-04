@@ -82,6 +82,16 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #58d358;
+}
+
+button:disabled {
+  background-color: #f0f2f4;
+  color: #858a8f;
+  cursor: none;
+}
+
 
 
 .homework22>div {
