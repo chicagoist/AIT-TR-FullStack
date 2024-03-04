@@ -4,7 +4,7 @@ let delay = (value) => {
       if (typeof value === "number") {
         resolve(value * 2);
       } else {
-        reject("The argument is not a number");
+        reject(new Error("The argument is not a number"));
       }
     }, 5000);
   });
@@ -16,7 +16,7 @@ let processingDelay = (value) => {
       console.log(response);
     })
     .catch((response) => {
-      console.log(response);
+      console.log(response.message);
     });
 };
 
