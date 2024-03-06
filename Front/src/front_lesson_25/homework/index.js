@@ -27,12 +27,10 @@ const getRandomCat = async (callback) => {
     });
 
     // //Error test
-    // const responseFromServer = Object.assign(new Error("Some response error message"));
+    //const responseFromServer = Object.assign(new Error("404"));
 
     if (!responseFromServer.ok) {
-      throw Object.assign(new Error("Some response error message"), {
-        response: responseFromServer,
-      });
+      throw `${responseFromServer}`;
     } else {
       const respondFact = await responseFromServer.json();
 
@@ -43,7 +41,7 @@ const getRandomCat = async (callback) => {
     }
   } catch (error) {
     homeworkContainer.style.color = "#fc0505";
-    div25.textContent = `Ошибка ${error.message}`;
+    div25.textContent = `ОШИБКА: ${error}`;
     styleBlock();
     homeworkContainer.append(div25);
   }
