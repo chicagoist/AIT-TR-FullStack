@@ -1,6 +1,6 @@
 let submitButton = document.querySelector(".submit-button");
 let userForm = document.querySelector("#user-form");
-let userCard = document.querySelector(".user-card");
+let homeworkContainer = document.querySelector(".user-card");
 
 let sendData = () => {
   let name = userForm.name.value;
