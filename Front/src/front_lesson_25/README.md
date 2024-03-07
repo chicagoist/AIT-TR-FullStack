@@ -201,7 +201,7 @@ button:disabled {
 ```
 
 
-```json
+```js
 code/lesson/book_data.json
 
 {
