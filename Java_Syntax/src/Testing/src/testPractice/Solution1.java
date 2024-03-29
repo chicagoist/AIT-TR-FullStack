@@ -34,5 +34,6 @@ public class Solution1 {
                 .average()
                 .orElse(0);
         System.out.println("Средний возраст всех сотрудников: " + averAge);
+
     }
 }
