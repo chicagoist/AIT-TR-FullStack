@@ -7,6 +7,13 @@ import java.util.stream.Collectors;
 
 public class Solution1 {
     public static void main(String[] args) {
+        /*Задача:
+
+- вывести имена всех сотрудников, младше 30.
+- вывести имена всех сотрудников, получающих зарплату в рублях.
+- вывести средний возраст всех сотрудников.*/
+
+
         List<Map<String, String>> employees = Arrays.asList(
                 Map.of("Имя", "Кирилл", "Возраст", "26", "Должность", "Middle java dev", "Зарплата", "150000 руб"),
                 Map.of("Имя", "Виталий", "Возраст", "28", "Должность", "Senjor java automation QA", "Зарплата", "2000$"),
